@@ -12,7 +12,7 @@ module.exports = {
       });
     });
   },
-  write: (data) => {
+  write: (filename, data) => {
     return new Promise((resolve, reject) => {
       fs.writeFile(filename, data, (err, data) => {
         if(err) {
