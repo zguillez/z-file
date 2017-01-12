@@ -1,18 +1,23 @@
 {
   "name": "z-file",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Tools for file streams",
   "author": "Guillermo de la Iglesia - zguillez.io",
   "repository": "git+https://github.com/zguillez/z-file.git",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [
     "nodejs",
     "file",
     "fs",
     "zguillez"
   ],
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint index.js bin/*.js --fix || true"
+  },
+  "devDependencies": {
+    "eslint": "latest",
+    "eslint-config-google": "latest",
+    "eslint-plugin-html": "latest"
+  },
   "license": "MIT"
 }
