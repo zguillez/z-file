@@ -1,12 +1,17 @@
 'use strict';
 const fs = require('fs');
+const fileType = require('file-type');
 const readfile = (filename) => {
   return new Promise((resolve, reject) => {
-    fs.readFile(filename, 'utf-8', (err, data) => {
+    fs.readFile(filename, (err, data) => {
       if(err) {
         reject(err);
       } else {
-        resolve(data);
+        if(fileType(data)) {
+          resolve(data);
+        } else {
+          resolve(data.toString());
+        }
       }
     });
   });
@@ -59,6 +64,17 @@ function File(path) {
         resolve(this);
       });
     });
+  };
+  this.fileType = () => {
+    let type = fileType(this.data);
+    if(! type) {
+      let arr = this.path.split(".");
+      type = {
+        ext: arr[arr.length - 1],
+        mime: 'text/plain'
+      };
+    }
+    return type;
   };
 }
 
