@@ -18,6 +18,12 @@ const readfile = (filename) => {
 };
 const writefile = (filename, data) => {
   return new Promise((resolve, reject) => {
+    let arr = filename.split('/');
+    let name = arr[arr.length - 1];
+    let dir = filename.replace(name, '');
+    if(! fs.existsSync(dir)) {
+      fs.mkdirSync(dir);
+    }
     fs.writeFile(filename, data, (err) => {
       if(err) {
         reject(err);
@@ -34,10 +40,6 @@ module.exports = {
     return new File(path);
   },
 };
-/**
- *
- * @constructor
- */
 function File(path) {
   this.path = path;
   this.filename = null;
