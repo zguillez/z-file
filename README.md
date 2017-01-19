@@ -18,12 +18,26 @@ file.read('./src/data.csv').then((data) => {
 });
 ```
 
-## Write file
+## Write file  
+
+Will create the path folders if not exits.
 
 ```
 file.write('./src/data.csv', data).then((data) => {
   console.log(data);
 });
+```
+
+## Check if folder exists
+
+```
+console.log( file.folder('./src/data') ); //true or false
+```
+
+### Create folder if not exists
+
+```
+console.log( file.folder('./src/data', true) ); //true
 ```
 
 # Use as object

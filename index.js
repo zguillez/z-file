@@ -21,9 +21,7 @@ const writefile = (filename, data) => {
     let arr = filename.split('/');
     let name = arr[arr.length - 1];
     let dir = filename.replace(name, '');
-    if(! fs.existsSync(dir)) {
-      fs.mkdirSync(dir);
-    }
+    createFolderIfnotextist(dir, true);
     fs.writeFile(filename, data, (err) => {
       if(err) {
         reject(err);
@@ -33,9 +31,22 @@ const writefile = (filename, data) => {
     });
   });
 };
+const createFolderIfnotextist = (dir, create = false) => {
+  if(! fs.existsSync(dir)) {
+    if(create) {
+      fs.mkdirSync(dir);
+      return true;
+    } else {
+      return false;
+    }
+  } else {
+    return true;
+  }
+};
 module.exports = {
   read: readfile,
   write: writefile,
+  folder: createFolderIfnotextist,
   create: (path) => {
     return new File(path);
   },
