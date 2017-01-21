@@ -42,12 +42,14 @@ console.log( file.folder('./src/data', true) ); //true
 
 # Use as object
 ```
-let f = file.create();
-f.load('./src/data.csv').then(() => {
-  f.data = 'Hello world!;
-  f.save().then(() => {
-    console.log(f.data);
-  });
+let f1 = file.create('./data/file.txt');
+f1.data = 'Hello world!;
+f1.save();
+  
+let f2 = file.create();
+f2.load('./data/file.txt').then(() => {
+  f2.data = 'Bye wold!';
+  f2.save()
 });
 ```
 
@@ -56,7 +58,6 @@ f.load('./src/data.csv').then(() => {
 ```
 let f = file.create('./src/newfile.csv');
 f.load('./src/oldfile.csv').then(() => {
-  f.data = 'Hello world!;
   f.save().then(() => {
     console.log(f.path); //file is saved on './src/newfile.csv'
   });
@@ -68,7 +69,6 @@ f.load('./src/oldfile.csv').then(() => {
 ```
 let f = file.create();
 f.load('./src/file.csv').then(() => {
-  f.data = 'Hello world!;
   f.save('./src/newfile.csv').then(() => {
     console.log(f.path); //file is saved on './src/newfile.csv'
   });
