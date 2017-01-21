@@ -85,5 +85,8 @@ Original code licensed under [MIT](https://en.wikipedia.org/wiki/MIT_License) Op
 
 # Changelog
 
+### v0.2.0 (January 21, 2017)
+* Core update with ES6 classes
+
 ### v0.1.0 (January 12, 2017)
 * Basic implementation for file
