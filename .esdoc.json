@@ -1,0 +1,18 @@
+{
+  "source": "./",
+  "destination": "./doc",
+  "excludes": [
+    ".tmp",
+    "dist",
+    "doc",
+    "node_modules"
+  ],
+  "plugins": [
+    {
+      "name": "esdoc-node"
+    },
+    {
+      "name": "esdoc-node-plugin"
+    }
+  ]
+}

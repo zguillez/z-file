@@ -1,6 +1,6 @@
 {
   "name": "z-file",
-  "version": "0.2.0",
+  "version": "0.1.20",
   "description": "Tools for file streams",
   "author": "Guillermo de la Iglesia - zguillez.io",
   "repository": "git+https://github.com/zguillez/z-file.git",
@@ -17,15 +17,15 @@
     "doc": "rimraf doc/* && esdoc"
   },
   "devDependencies": {
-    "esdoc": "latest",
-    "esdoc-node": "latest",
-    "esdoc-node-plugin": "latest",
+    "esdoc": "^0.5.2",
+    "esdoc-node": "^1.0.0",
+    "esdoc-node-plugin": "^0.2.1",
     "eslint": "latest",
     "eslint-config-google": "latest",
     "eslint-plugin-html": "latest"
   },
   "license": "MIT",
   "dependencies": {
-    "file-type": "latest"
+    "file-type": "^4.0.0"
   }
 }
