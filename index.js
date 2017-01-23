@@ -3,4 +3,4 @@
  *
  * @type {Zfile}
  */
-module.exports = require('./modules/Zfile.js');
+module.exports = require('./src/Zfile.js');

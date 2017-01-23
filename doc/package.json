@@ -1,6 +1,6 @@
 {
   "name": "z-file",
-  "version": "0.1.20",
+  "version": "0.2.1",
   "description": "Tools for file streams",
   "author": "Guillermo de la Iglesia - zguillez.io",
   "repository": "git+https://github.com/zguillez/z-file.git",
@@ -12,20 +12,20 @@
   ],
   "main": "index.js",
   "scripts": {
-    "test": "node bin/test.js",
+    "test": "bin/test.js",
     "lint": "eslint index.js bin/*.js --fix || true",
     "doc": "rimraf doc/* && esdoc"
   },
   "devDependencies": {
-    "esdoc": "^0.5.2",
-    "esdoc-node": "^1.0.0",
-    "esdoc-node-plugin": "^0.2.1",
+    "esdoc": "latest",
+    "esdoc-node": "latest",
+    "esdoc-node-plugin": "latest",
     "eslint": "latest",
     "eslint-config-google": "latest",
     "eslint-plugin-html": "latest"
   },
   "license": "MIT",
   "dependencies": {
-    "file-type": "^4.0.0"
+    "file-type": "latest"
   }
 }

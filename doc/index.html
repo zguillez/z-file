@@ -32,8 +32,8 @@
 <nav class="navigation" data-ice="nav"><div>
   <ul>
     
-  <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">modules</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/z-files/modules/Zfile.js~Zfile.html">Zfile</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/z-files/modules/ZfileObject.js~ZfileObject.html">ZfileObject</a></span></span></li>
+  <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">src</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/z-file/src/Zfile.js~Zfile.html">Zfile</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/z-file/src/ZfileObject.js~ZfileObject.html">ZfileObject</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-zfile">zfile</a></span></span></li>
 </ul>
 </div>
@@ -59,17 +59,18 @@
 </code></pre><h3 id="create-folder-if-not-exists">Create folder if not exists</h3>
 <pre><code><code class="source-code prettyprint">console.log( file.folder(&apos;./src/data&apos;, true) ); //true</code>
 </code></pre><h1 id="use-as-object">Use as object</h1>
-<pre><code><code class="source-code prettyprint">let f = file.create();
-f.load(&apos;./src/data.csv&apos;).then(() =&gt; {
-  f.data = &apos;Hello world!;
-  f.save().then(() =&gt; {
-    console.log(f.data);
-  });
+<pre><code><code class="source-code prettyprint">let f1 = file.create(&apos;./data/file.txt&apos;);
+f1.data = &apos;Hello world!;
+f1.save();
+
+let f2 = file.create();
+f2.load(&apos;./data/file.txt&apos;).then(() =&gt; {
+  f2.data = &apos;Bye wold!&apos;;
+  f2.save()
 });</code>
 </code></pre><h3 id="creating-new-file-and-load-content-from-existing-file">Creating new file and load content from existing file</h3>
 <pre><code><code class="source-code prettyprint">let f = file.create(&apos;./src/newfile.csv&apos;);
 f.load(&apos;./src/oldfile.csv&apos;).then(() =&gt; {
-  f.data = &apos;Hello world!;
   f.save().then(() =&gt; {
     console.log(f.path); //file is saved on &apos;./src/newfile.csv&apos;
   });
@@ -77,7 +78,6 @@ f.load(&apos;./src/oldfile.csv&apos;).then(() =&gt; {
 </code></pre><h2 id="saving-as-a-new-file">Saving as a new file</h2>
 <pre><code><code class="source-code prettyprint">let f = file.create();
 f.load(&apos;./src/file.csv&apos;).then(() =&gt; {
-  f.data = &apos;Hello world!;
   f.save(&apos;./src/newfile.csv&apos;).then(() =&gt; {
     console.log(f.path); //file is saved on &apos;./src/newfile.csv&apos;
   });
@@ -88,6 +88,10 @@ f.load(&apos;./src/file.csv&apos;).then(() =&gt; {
 <p>&#xA9;2017 Zguillez.io</p>
 <p>Original code licensed under <a href="https://en.wikipedia.org/wiki/MIT_License">MIT</a> Open Source projects used within this project retain their original licenses.</p>
 <h1 id="changelog">Changelog</h1>
+<h3 id="v0-2-0-january-21-2017-">v0.2.0 (January 21, 2017)</h3>
+<ul>
+<li>Core update with ES6 classes</li>
+</ul>
 <h3 id="v0-1-0-january-12-2017-">v0.1.0 (January 12, 2017)</h3>
 <ul>
 <li>Basic implementation for file</li>

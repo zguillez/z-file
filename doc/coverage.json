@@ -3,12 +3,12 @@
   "expectCount": 16,
   "actualCount": 16,
   "files": {
-    "z-files/modules/Zfile.js": {
+    "z-file/src/Zfile.js": {
       "expectCount": 7,
       "actualCount": 7,
       "undocumentLines": []
     },
-    "z-files/modules/ZfileObject.js": {
+    "z-file/src/ZfileObject.js": {
       "expectCount": 9,
       "actualCount": 9,
       "undocumentLines": []

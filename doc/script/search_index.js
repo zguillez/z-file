@@ -1,20 +1,20 @@
 window.esdocSearchIndex = [
   [
-    "z-file/z-files/modules/zfile.js~zfile",
-    "class/z-files/modules/Zfile.js~Zfile.html",
-    "<span>Zfile</span> <span class=\"search-result-import-path\">z-file/z-files/modules/Zfile.js</span>",
+    "z-file/z-file/src/zfile.js~zfile",
+    "class/z-file/src/Zfile.js~Zfile.html",
+    "<span>Zfile</span> <span class=\"search-result-import-path\">z-file/z-file/src/Zfile.js</span>",
     "class"
   ],
   [
-    "z-file/z-files/modules/zfileobject.js~zfileobject",
-    "class/z-files/modules/ZfileObject.js~ZfileObject.html",
-    "<span>ZfileObject</span> <span class=\"search-result-import-path\">z-file/z-files/modules/ZfileObject.js</span>",
+    "z-file/z-file/src/zfileobject.js~zfileobject",
+    "class/z-file/src/ZfileObject.js~ZfileObject.html",
+    "<span>ZfileObject</span> <span class=\"search-result-import-path\">z-file/z-file/src/ZfileObject.js</span>",
     "class"
   ],
   [
-    "z-file/z-files/modules/zfile.js~zfile",
+    "z-file/z-file/src/zfile.js~zfile",
     "variable/index.html#static-variable-zfile",
-    "<span>zfile</span> <span class=\"search-result-import-path\">z-file/z-files/modules/Zfile.js</span>",
+    "<span>zfile</span> <span class=\"search-result-import-path\">z-file/z-file/src/Zfile.js</span>",
     "variable"
   ],
   [
@@ -3912,111 +3912,111 @@ window.esdocSearchIndex = [
     "external"
   ],
   [
-    "z-files/.eslintrc.js",
-    "file/z-files/.eslintrc.js.html",
-    "z-files/.eslintrc.js",
+    "z-file/.eslintrc.js",
+    "file/z-file/.eslintrc.js.html",
+    "z-file/.eslintrc.js",
     "file"
   ],
   [
-    "z-files/bin/test.js",
-    "file/z-files/bin/test.js.html",
-    "z-files/bin/test.js",
+    "z-file/bin/test.js",
+    "file/z-file/bin/test.js.html",
+    "z-file/bin/test.js",
     "file"
   ],
   [
-    "z-files/index.js",
-    "file/z-files/index.js.html",
-    "z-files/index.js",
+    "z-file/index.js",
+    "file/z-file/index.js.html",
+    "z-file/index.js",
     "file"
   ],
   [
-    "z-files/modules/zfile.js",
-    "file/z-files/modules/Zfile.js.html",
-    "z-files/modules/Zfile.js",
+    "z-file/src/zfile.js",
+    "file/z-file/src/Zfile.js.html",
+    "z-file/src/Zfile.js",
     "file"
   ],
   [
-    "z-files/modules/zfile.js~zfile#checkiffolderexists",
-    "class/z-files/modules/Zfile.js~Zfile.html#instance-method-checkIfFolderExists",
-    "z-files/modules/Zfile.js~Zfile#checkIfFolderExists",
+    "z-file/src/zfile.js~zfile#checkiffolderexists",
+    "class/z-file/src/Zfile.js~Zfile.html#instance-method-checkIfFolderExists",
+    "z-file/src/Zfile.js~Zfile#checkIfFolderExists",
     "method"
   ],
   [
-    "z-files/modules/zfile.js~zfile#constructor",
-    "class/z-files/modules/Zfile.js~Zfile.html#instance-constructor-constructor",
-    "z-files/modules/Zfile.js~Zfile#constructor",
+    "z-file/src/zfile.js~zfile#constructor",
+    "class/z-file/src/Zfile.js~Zfile.html#instance-constructor-constructor",
+    "z-file/src/Zfile.js~Zfile#constructor",
     "method"
   ],
   [
-    "z-files/modules/zfile.js~zfile#create",
-    "class/z-files/modules/Zfile.js~Zfile.html#instance-method-create",
-    "z-files/modules/Zfile.js~Zfile#create",
+    "z-file/src/zfile.js~zfile#create",
+    "class/z-file/src/Zfile.js~Zfile.html#instance-method-create",
+    "z-file/src/Zfile.js~Zfile#create",
     "method"
   ],
   [
-    "z-files/modules/zfile.js~zfile#read",
-    "class/z-files/modules/Zfile.js~Zfile.html#instance-method-read",
-    "z-files/modules/Zfile.js~Zfile#read",
+    "z-file/src/zfile.js~zfile#read",
+    "class/z-file/src/Zfile.js~Zfile.html#instance-method-read",
+    "z-file/src/Zfile.js~Zfile#read",
     "method"
   ],
   [
-    "z-files/modules/zfile.js~zfile#write",
-    "class/z-files/modules/Zfile.js~Zfile.html#instance-method-write",
-    "z-files/modules/Zfile.js~Zfile#write",
+    "z-file/src/zfile.js~zfile#write",
+    "class/z-file/src/Zfile.js~Zfile.html#instance-method-write",
+    "z-file/src/Zfile.js~Zfile#write",
     "method"
   ],
   [
-    "z-files/modules/zfileobject.js",
-    "file/z-files/modules/ZfileObject.js.html",
-    "z-files/modules/ZfileObject.js",
+    "z-file/src/zfileobject.js",
+    "file/z-file/src/ZfileObject.js.html",
+    "z-file/src/ZfileObject.js",
     "file"
   ],
   [
-    "z-files/modules/zfileobject.js~zfileobject#constructor",
-    "class/z-files/modules/ZfileObject.js~ZfileObject.html#instance-constructor-constructor",
-    "z-files/modules/ZfileObject.js~ZfileObject#constructor",
+    "z-file/src/zfileobject.js~zfileobject#constructor",
+    "class/z-file/src/ZfileObject.js~ZfileObject.html#instance-constructor-constructor",
+    "z-file/src/ZfileObject.js~ZfileObject#constructor",
     "method"
   ],
   [
-    "z-files/modules/zfileobject.js~zfileobject#data",
-    "class/z-files/modules/ZfileObject.js~ZfileObject.html#instance-member-data",
-    "z-files/modules/ZfileObject.js~ZfileObject#data",
+    "z-file/src/zfileobject.js~zfileobject#data",
+    "class/z-file/src/ZfileObject.js~ZfileObject.html#instance-member-data",
+    "z-file/src/ZfileObject.js~ZfileObject#data",
     "member"
   ],
   [
-    "z-files/modules/zfileobject.js~zfileobject#engine",
-    "class/z-files/modules/ZfileObject.js~ZfileObject.html#instance-member-engine",
-    "z-files/modules/ZfileObject.js~ZfileObject#engine",
+    "z-file/src/zfileobject.js~zfileobject#engine",
+    "class/z-file/src/ZfileObject.js~ZfileObject.html#instance-member-engine",
+    "z-file/src/ZfileObject.js~ZfileObject#engine",
     "member"
   ],
   [
-    "z-files/modules/zfileobject.js~zfileobject#filetype",
-    "class/z-files/modules/ZfileObject.js~ZfileObject.html#instance-method-fileType",
-    "z-files/modules/ZfileObject.js~ZfileObject#fileType",
+    "z-file/src/zfileobject.js~zfileobject#filetype",
+    "class/z-file/src/ZfileObject.js~ZfileObject.html#instance-method-fileType",
+    "z-file/src/ZfileObject.js~ZfileObject#fileType",
     "method"
   ],
   [
-    "z-files/modules/zfileobject.js~zfileobject#filename",
-    "class/z-files/modules/ZfileObject.js~ZfileObject.html#instance-member-filename",
-    "z-files/modules/ZfileObject.js~ZfileObject#filename",
+    "z-file/src/zfileobject.js~zfileobject#filename",
+    "class/z-file/src/ZfileObject.js~ZfileObject.html#instance-member-filename",
+    "z-file/src/ZfileObject.js~ZfileObject#filename",
     "member"
   ],
   [
-    "z-files/modules/zfileobject.js~zfileobject#load",
-    "class/z-files/modules/ZfileObject.js~ZfileObject.html#instance-method-load",
-    "z-files/modules/ZfileObject.js~ZfileObject#load",
+    "z-file/src/zfileobject.js~zfileobject#load",
+    "class/z-file/src/ZfileObject.js~ZfileObject.html#instance-method-load",
+    "z-file/src/ZfileObject.js~ZfileObject#load",
     "method"
   ],
   [
-    "z-files/modules/zfileobject.js~zfileobject#path",
-    "class/z-files/modules/ZfileObject.js~ZfileObject.html#instance-member-path",
-    "z-files/modules/ZfileObject.js~ZfileObject#path",
+    "z-file/src/zfileobject.js~zfileobject#path",
+    "class/z-file/src/ZfileObject.js~ZfileObject.html#instance-member-path",
+    "z-file/src/ZfileObject.js~ZfileObject#path",
     "member"
   ],
   [
-    "z-files/modules/zfileobject.js~zfileobject#save",
-    "class/z-files/modules/ZfileObject.js~ZfileObject.html#instance-method-save",
-    "z-files/modules/ZfileObject.js~ZfileObject#save",
+    "z-file/src/zfileobject.js~zfileobject#save",
+    "class/z-file/src/ZfileObject.js~ZfileObject.html#instance-method-save",
+    "z-file/src/ZfileObject.js~ZfileObject#save",
     "method"
   ]
 ]
