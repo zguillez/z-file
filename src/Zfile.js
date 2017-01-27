@@ -44,7 +44,7 @@ class Zfile {
       let arr = filename.split('/');
       let name = arr[arr.length - 1];
       let dir = filename.replace(name, '');
-      this.checkIfFolderExists(dir, true);
+      this.folder(dir, true);
       fs.writeFile(filename, data, (err) => {
         if(err) {
           reject(err);
