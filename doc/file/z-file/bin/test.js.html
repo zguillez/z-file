@@ -44,8 +44,10 @@
 &apos;use strict&apos;;
 let file = require(&apos;../src/Zfile.js&apos;);
 file.checkIfFolderExists(&apos;.temp&apos;, true);
-let f = file.create(&apos;.temp/test.txt&apos;);
-f.load(&apos;bin/test.js&apos;).then(() =&gt; f.save());
+// let f = file.create(&apos;.temp/test.txt&apos;);
+// f.load(&apos;bin/test.js&apos;).then(() =&gt; f.save());
+let f = file.checkIfFileExists(&apos;.temp/test.txt&apos;, true);
+console.log(f);
 
 </code></pre>
 

@@ -1,11 +1,11 @@
 {
   "coverage": "100%",
-  "expectCount": 16,
-  "actualCount": 16,
+  "expectCount": 17,
+  "actualCount": 17,
   "files": {
     "z-file/src/Zfile.js": {
-      "expectCount": 7,
-      "actualCount": 7,
+      "expectCount": 8,
+      "actualCount": 8,
       "undocumentLines": []
     },
     "z-file/src/ZfileObject.js": {

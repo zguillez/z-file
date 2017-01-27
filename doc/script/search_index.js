@@ -3936,12 +3936,6 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
-    "z-file/src/zfile.js~zfile#checkiffolderexists",
-    "class/z-file/src/Zfile.js~Zfile.html#instance-method-checkIfFolderExists",
-    "z-file/src/Zfile.js~Zfile#checkIfFolderExists",
-    "method"
-  ],
-  [
     "z-file/src/zfile.js~zfile#constructor",
     "class/z-file/src/Zfile.js~Zfile.html#instance-constructor-constructor",
     "z-file/src/Zfile.js~Zfile#constructor",
@@ -3951,6 +3945,18 @@ window.esdocSearchIndex = [
     "z-file/src/zfile.js~zfile#create",
     "class/z-file/src/Zfile.js~Zfile.html#instance-method-create",
     "z-file/src/Zfile.js~Zfile#create",
+    "method"
+  ],
+  [
+    "z-file/src/zfile.js~zfile#file",
+    "class/z-file/src/Zfile.js~Zfile.html#instance-method-file",
+    "z-file/src/Zfile.js~Zfile#file",
+    "method"
+  ],
+  [
+    "z-file/src/zfile.js~zfile#folder",
+    "class/z-file/src/Zfile.js~Zfile.html#instance-method-folder",
+    "z-file/src/Zfile.js~Zfile#folder",
     "method"
   ],
   [

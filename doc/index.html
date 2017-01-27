@@ -58,6 +58,10 @@
 <pre><code><code class="source-code prettyprint">console.log( file.folder(&apos;./src/data&apos;) ); //true or false</code>
 </code></pre><h3 id="create-folder-if-not-exists">Create folder if not exists</h3>
 <pre><code><code class="source-code prettyprint">console.log( file.folder(&apos;./src/data&apos;, true) ); //true</code>
+</code></pre><h2 id="check-if-file-exists">Check if file exists</h2>
+<pre><code><code class="source-code prettyprint">console.log( file.file(&apos;./src/data.txt&apos;) ); //true or false</code>
+</code></pre><h3 id="create-file-if-not-exists">Create file if not exists</h3>
+<pre><code><code class="source-code prettyprint">console.log( file.file(&apos;./src/data.txt&apos;, true) ); //true</code>
 </code></pre><h1 id="use-as-object">Use as object</h1>
 <pre><code><code class="source-code prettyprint">let f1 = file.create(&apos;./data/file.txt&apos;);
 f1.data = &apos;Hello world!;

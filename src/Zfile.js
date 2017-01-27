@@ -76,7 +76,7 @@ class Zfile {
 
   /**
    * Comprueba si una ruta de fichero existe
-   * @param {string} dir - Ruta del fichero
+   * @param {string} file - Ruta del fichero
    * @param {boolean} create - Indica si se debe forzar el fichero
    * @returns {boolean}
    */
