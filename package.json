@@ -1,6 +1,6 @@
 {
   "name": "z-file",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Tools for file streams",
   "author": "Guillermo de la Iglesia - zguillez.io",
   "repository": "git+https://github.com/zguillez/z-file.git",

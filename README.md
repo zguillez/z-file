@@ -40,6 +40,18 @@ console.log( file.folder('./src/data') ); //true or false
 console.log( file.folder('./src/data', true) ); //true
 ```
 
+## Check if file exists
+
+```
+console.log( file.file('./src/data.txt') ); //true or false
+```
+
+### Create file if not exists
+
+```
+console.log( file.file('./src/data.txt', true) ); //true
+```
+
 # Use as object
 ```
 let f1 = file.create('./data/file.txt');

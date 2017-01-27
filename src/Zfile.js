@@ -61,7 +61,7 @@ class Zfile {
    * @param {boolean} create - Indica si se debe de crear las carpetas inexistentes
    * @returns {boolean}
    */
-  checkIfFolderExists(dir, create = false) {
+  folder(dir, create = false) {
     if(! fs.existsSync(dir)) {
       if(create) {
         fs.mkdirSync(dir);
@@ -71,6 +71,28 @@ class Zfile {
       }
     } else {
       return true;
+    }
+  };
+
+  /**
+   * Comprueba si una ruta de fichero existe
+   * @param {string} dir - Ruta del fichero
+   * @param {boolean} create - Indica si se debe forzar el fichero
+   * @returns {boolean}
+   */
+  file(file, create = false) {
+    try {
+      return fs.statSync(file).isFile();
+    } catch(e) {
+      if(e.code === 'ENOENT') {
+        if(create) {
+          this.write(file, '');
+          return true;
+        } else {
+          return false;
+        }
+      }
+      return false;
     }
   };
 
