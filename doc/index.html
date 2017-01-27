@@ -44,54 +44,67 @@
 <h2 id="install">Install</h2>
 <pre><code><code class="source-code prettyprint">npm i z-file</code>
 </code></pre><h1 id="usage">Usage</h1>
-<pre><code><code class="source-code prettyprint">const file = require(&apos;z-file&apos;);</code>
+<pre><code><code class="source-code prettyprint">const zfile = require(&apos;z-file&apos;);</code>
 </code></pre><h2 id="read-file">Read file</h2>
-<pre><code><code class="source-code prettyprint">file.read(&apos;./src/data.csv&apos;).then((data) =&gt; {
+<pre><code><code class="source-code prettyprint">zfile.read(&apos;./src/data.csv&apos;).then((data) =&gt; {
   console.log(data);
 });</code>
 </code></pre><h2 id="write-file">Write file</h2>
 <p>Will create the path folders if not exits.</p>
-<pre><code><code class="source-code prettyprint">file.write(&apos;./src/data.csv&apos;, data).then((data) =&gt; {
+<pre><code><code class="source-code prettyprint">zfile.write(&apos;./src/data.csv&apos;, data).then((data) =&gt; {
   console.log(data);
 });</code>
 </code></pre><h2 id="check-if-folder-exists">Check if folder exists</h2>
-<pre><code><code class="source-code prettyprint">console.log( file.folder(&apos;./src/data&apos;) ); //true or false</code>
+<pre><code><code class="source-code prettyprint">console.log( zfile.folder(&apos;./src/data&apos;) ); //true or false</code>
 </code></pre><h3 id="create-folder-if-not-exists">Create folder if not exists</h3>
-<pre><code><code class="source-code prettyprint">console.log( file.folder(&apos;./src/data&apos;, true) ); //true</code>
+<pre><code><code class="source-code prettyprint">console.log( zfile.folder(&apos;./src/data&apos;, true) ); //true</code>
 </code></pre><h2 id="check-if-file-exists">Check if file exists</h2>
-<pre><code><code class="source-code prettyprint">console.log( file.file(&apos;./src/data.txt&apos;) ); //true or false</code>
+<pre><code><code class="source-code prettyprint">console.log( zfile.file(&apos;./src/data.txt&apos;) ); //true or false</code>
 </code></pre><h3 id="create-file-if-not-exists">Create file if not exists</h3>
-<pre><code><code class="source-code prettyprint">console.log( file.file(&apos;./src/data.txt&apos;, true) ); //true</code>
+<pre><code><code class="source-code prettyprint">console.log( zfile.file(&apos;./src/data.txt&apos;, true) ); //true</code>
 </code></pre><h1 id="use-as-object">Use as object</h1>
-<pre><code><code class="source-code prettyprint">let f1 = file.create(&apos;./data/file.txt&apos;);
+<pre><code><code class="source-code prettyprint">let f1 = zfile.create(&apos;./data/file.txt&apos;);
 f1.data = &apos;Hello world!;
 f1.save();
 
-let f2 = file.create();
-f2.load(&apos;./data/file.txt&apos;).then(() =&gt; {
+let f2 = zfile.create();
+f2.load(f1.path).then(() =&gt; {
   f2.data = &apos;Bye wold!&apos;;
   f2.save()
 });</code>
 </code></pre><h3 id="creating-new-file-and-load-content-from-existing-file">Creating new file and load content from existing file</h3>
-<pre><code><code class="source-code prettyprint">let f = file.create(&apos;./src/newfile.csv&apos;);
+<pre><code><code class="source-code prettyprint">let f = zfile.create(&apos;./src/newfile.csv&apos;);
 f.load(&apos;./src/oldfile.csv&apos;).then(() =&gt; {
   f.save().then(() =&gt; {
     console.log(f.path); //file is saved on &apos;./src/newfile.csv&apos;
   });
 });</code>
 </code></pre><h2 id="saving-as-a-new-file">Saving as a new file</h2>
-<pre><code><code class="source-code prettyprint">let f = file.create();
+<pre><code><code class="source-code prettyprint">let f = zfile.create();
 f.load(&apos;./src/file.csv&apos;).then(() =&gt; {
   f.save(&apos;./src/newfile.csv&apos;).then(() =&gt; {
     console.log(f.path); //file is saved on &apos;./src/newfile.csv&apos;
   });
 });</code>
+</code></pre><h1 id="tools">Tools</h1>
+<h2 id="read-files-on-folder">Read files on folder</h2>
+<pre><code><code class="source-code prettyprint">zfile.files(&apos;./data&apos;).forEach((file) =&gt; {
+    console.log(file);
+  });</code>
+</code></pre><h2 id="read-folders-on-folder">Read folders on folder</h2>
+<pre><code><code class="source-code prettyprint">zfile.folders(&apos;./data&apos;).forEach((folder) =&gt; {
+    console.log(folder);
+  });</code>
 </code></pre><h1 id="contributing-and-issues">Contributing and issues</h1>
 <p>Contributors are welcome, please fork and send pull requests! If you have any ideas on how to make this project better then please submit an issue or send me an <a href="mailto:mail@zguillez.io">email</a>.</p>
 <h1 id="license">License</h1>
 <p>&#xA9;2017 Zguillez.io</p>
 <p>Original code licensed under <a href="https://en.wikipedia.org/wiki/MIT_License">MIT</a> Open Source projects used within this project retain their original licenses.</p>
 <h1 id="changelog">Changelog</h1>
+<h3 id="v0-3-0-january-27-2017-">v0.3.0 (January 27, 2017)</h3>
+<ul>
+<li>Read files and folders functions</li>
+</ul>
 <h3 id="v0-2-0-january-21-2017-">v0.2.0 (January 21, 2017)</h3>
 <ul>
 <li>Core update with ES6 classes</li>

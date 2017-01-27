@@ -97,6 +97,24 @@ class Zfile {
   };
 
   /**
+   * Devuelve las carpetas de una ruta
+   * @param {String} dir - ruta del directorio
+   * @returns {Array} - Array con los nombre de las carpetas
+   */
+  folders(dir) {
+    return fs.readdirSync(dir).filter(f => fs.statSync(dir + "/" + f).isDirectory());
+  }
+
+  /**
+   * Devuelve los ficheros de una ruta
+   * @param {String} dir - ruta del directorio
+   * @returns {Array} - Array con los nombre de los ficheros
+   */
+  files(dir) {
+    return fs.readdirSync(dir).filter(f => fs.statSync(dir + "/" + f).isFile());
+  }
+
+  /**
    * Genera una instancia de ZfileObject
    * @param {string} path - Ruta donde crear el fichero
    * @returns {Zfile}

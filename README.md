@@ -7,13 +7,13 @@ npm i z-file
 ```
 # Usage
 ```
-const file = require('z-file');
+const zfile = require('z-file');
 ```
 
 ## Read file
 
 ```
-file.read('./src/data.csv').then((data) => {
+zfile.read('./src/data.csv').then((data) => {
   console.log(data);
 });
 ```
@@ -23,7 +23,7 @@ file.read('./src/data.csv').then((data) => {
 Will create the path folders if not exits.
 
 ```
-file.write('./src/data.csv', data).then((data) => {
+zfile.write('./src/data.csv', data).then((data) => {
   console.log(data);
 });
 ```
@@ -31,35 +31,35 @@ file.write('./src/data.csv', data).then((data) => {
 ## Check if folder exists
 
 ```
-console.log( file.folder('./src/data') ); //true or false
+console.log( zfile.folder('./src/data') ); //true or false
 ```
 
 ### Create folder if not exists
 
 ```
-console.log( file.folder('./src/data', true) ); //true
+console.log( zfile.folder('./src/data', true) ); //true
 ```
 
 ## Check if file exists
 
 ```
-console.log( file.file('./src/data.txt') ); //true or false
+console.log( zfile.file('./src/data.txt') ); //true or false
 ```
 
 ### Create file if not exists
 
 ```
-console.log( file.file('./src/data.txt', true) ); //true
+console.log( zfile.file('./src/data.txt', true) ); //true
 ```
 
 # Use as object
 ```
-let f1 = file.create('./data/file.txt');
+let f1 = zfile.create('./data/file.txt');
 f1.data = 'Hello world!;
 f1.save();
   
-let f2 = file.create();
-f2.load('./data/file.txt').then(() => {
+let f2 = zfile.create();
+f2.load(f1.path).then(() => {
   f2.data = 'Bye wold!';
   f2.save()
 });
@@ -68,7 +68,7 @@ f2.load('./data/file.txt').then(() => {
 ### Creating new file and load content from existing file
 
 ```
-let f = file.create('./src/newfile.csv');
+let f = zfile.create('./src/newfile.csv');
 f.load('./src/oldfile.csv').then(() => {
   f.save().then(() => {
     console.log(f.path); //file is saved on './src/newfile.csv'
@@ -79,12 +79,30 @@ f.load('./src/oldfile.csv').then(() => {
 ## Saving as a new file
 
 ```
-let f = file.create();
+let f = zfile.create();
 f.load('./src/file.csv').then(() => {
   f.save('./src/newfile.csv').then(() => {
     console.log(f.path); //file is saved on './src/newfile.csv'
   });
 });
+```
+
+# Tools
+
+## Read files on folder
+
+```
+zfile.files('./data').forEach((file) => {
+    console.log(file);
+  });
+```
+
+## Read folders on folder
+
+```
+zfile.folders('./data').forEach((folder) => {
+    console.log(folder);
+  });
 ```
 
 # Contributing and issues
@@ -96,6 +114,9 @@ Contributors are welcome, please fork and send pull requests! If you have any id
 Original code licensed under [MIT](https://en.wikipedia.org/wiki/MIT_License) Open Source projects used within this project retain their original licenses.
 
 # Changelog
+
+### v0.3.0 (January 27, 2017)
+* Read files and folders functions
 
 ### v0.2.0 (January 21, 2017)
 * Core update with ES6 classes

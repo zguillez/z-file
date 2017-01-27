@@ -3954,9 +3954,21 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
+    "z-file/src/zfile.js~zfile#files",
+    "class/z-file/src/Zfile.js~Zfile.html#instance-method-files",
+    "z-file/src/Zfile.js~Zfile#files",
+    "method"
+  ],
+  [
     "z-file/src/zfile.js~zfile#folder",
     "class/z-file/src/Zfile.js~Zfile.html#instance-method-folder",
     "z-file/src/Zfile.js~Zfile#folder",
+    "method"
+  ],
+  [
+    "z-file/src/zfile.js~zfile#folders",
+    "class/z-file/src/Zfile.js~Zfile.html#instance-method-folders",
+    "z-file/src/Zfile.js~Zfile#folders",
     "method"
   ],
   [
