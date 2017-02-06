@@ -1,4 +1,6 @@
 # z-file
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/zguillez/z-file.svg)](https://greenkeeper.io/)
 Nodejs tools for file streams
 
 ## Install
