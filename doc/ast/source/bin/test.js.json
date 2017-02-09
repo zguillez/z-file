@@ -1,28 +1,28 @@
 {
   "type": "File",
   "start": 0,
-  "end": 278,
+  "end": 354,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 10,
+      "line": 12,
       "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 278,
+    "end": 354,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 10,
+        "line": 12,
         "column": 0
       }
     },
@@ -130,40 +130,13 @@
             }
           }
         ],
-        "kind": "let"
-      },
-      {
-        "type": "ExpressionStatement",
-        "start": 75,
-        "end": 115,
-        "loc": {
-          "start": {
-            "line": 4,
-            "column": 0
-          },
-          "end": {
-            "line": 4,
-            "column": 40
-          }
-        },
-        "expression": {
-          "type": "CallExpression",
-          "start": 75,
-          "end": 114,
-          "loc": {
-            "start": {
-              "line": 4,
-              "column": 0
-            },
-            "end": {
-              "line": 4,
-              "column": 39
-            }
-          },
-          "callee": {
-            "type": "MemberExpression",
+        "kind": "let",
+        "trailingComments": [
+          {
+            "type": "CommentLine",
+            "value": "file.checkIfFolderExists('.temp', true);",
             "start": 75,
-            "end": 99,
+            "end": 117,
             "loc": {
               "start": {
                 "line": 4,
@@ -171,90 +144,15 @@
               },
               "end": {
                 "line": 4,
-                "column": 24
+                "column": 42
               }
-            },
-            "object": {
-              "type": "Identifier",
-              "start": 75,
-              "end": 79,
-              "loc": {
-                "start": {
-                  "line": 4,
-                  "column": 0
-                },
-                "end": {
-                  "line": 4,
-                  "column": 4
-                },
-                "identifierName": "file"
-              },
-              "name": "file"
-            },
-            "property": {
-              "type": "Identifier",
-              "start": 80,
-              "end": 99,
-              "loc": {
-                "start": {
-                  "line": 4,
-                  "column": 5
-                },
-                "end": {
-                  "line": 4,
-                  "column": 24
-                },
-                "identifierName": "checkIfFolderExists"
-              },
-              "name": "checkIfFolderExists"
-            },
-            "computed": false
-          },
-          "arguments": [
-            {
-              "type": "StringLiteral",
-              "start": 100,
-              "end": 107,
-              "loc": {
-                "start": {
-                  "line": 4,
-                  "column": 25
-                },
-                "end": {
-                  "line": 4,
-                  "column": 32
-                }
-              },
-              "extra": {
-                "rawValue": ".temp",
-                "raw": "'.temp'"
-              },
-              "value": ".temp"
-            },
-            {
-              "type": "BooleanLiteral",
-              "start": 109,
-              "end": 113,
-              "loc": {
-                "start": {
-                  "line": 4,
-                  "column": 34
-                },
-                "end": {
-                  "line": 4,
-                  "column": 38
-                }
-              },
-              "value": true
             }
-          ]
-        },
-        "trailingComments": [
+          },
           {
             "type": "CommentLine",
             "value": " let f = file.create('.temp/test.txt');",
-            "start": 116,
-            "end": 157,
+            "start": 118,
+            "end": 159,
             "loc": {
               "start": {
                 "line": 5,
@@ -269,8 +167,8 @@
           {
             "type": "CommentLine",
             "value": " f.load('bin/test.js').then(() => f.save());",
-            "start": 158,
-            "end": 204,
+            "start": 160,
+            "end": 206,
             "loc": {
               "start": {
                 "line": 6,
@@ -281,49 +179,81 @@
                 "column": 46
               }
             }
+          },
+          {
+            "type": "CommentLine",
+            "value": " let f = file.checkIfFileExists('.temp/test.txt', true);",
+            "start": 207,
+            "end": 265,
+            "loc": {
+              "start": {
+                "line": 7,
+                "column": 0
+              },
+              "end": {
+                "line": 7,
+                "column": 58
+              }
+            }
+          },
+          {
+            "type": "CommentLine",
+            "value": " let f = file.clean(['doc', 'doc_']);",
+            "start": 266,
+            "end": 305,
+            "loc": {
+              "start": {
+                "line": 8,
+                "column": 0
+              },
+              "end": {
+                "line": 8,
+                "column": 39
+              }
+            }
           }
         ]
       },
       {
         "type": "VariableDeclaration",
-        "start": 205,
-        "end": 260,
+        "start": 306,
+        "end": 336,
         "loc": {
           "start": {
-            "line": 7,
+            "line": 9,
             "column": 0
           },
           "end": {
-            "line": 7,
-            "column": 55
+            "line": 9,
+            "column": 30
           }
         },
         "declarations": [
           {
             "type": "VariableDeclarator",
-            "start": 209,
-            "end": 259,
+            "start": 310,
+            "end": 335,
             "loc": {
               "start": {
-                "line": 7,
+                "line": 9,
                 "column": 4
               },
               "end": {
-                "line": 7,
-                "column": 54
+                "line": 9,
+                "column": 29
               }
             },
             "id": {
               "type": "Identifier",
-              "start": 209,
-              "end": 210,
+              "start": 310,
+              "end": 311,
               "loc": {
                 "start": {
-                  "line": 7,
+                  "line": 9,
                   "column": 4
                 },
                 "end": {
-                  "line": 7,
+                  "line": 9,
                   "column": 5
                 },
                 "identifierName": "f"
@@ -333,43 +263,43 @@
             },
             "init": {
               "type": "CallExpression",
-              "start": 213,
-              "end": 259,
+              "start": 314,
+              "end": 335,
               "loc": {
                 "start": {
-                  "line": 7,
+                  "line": 9,
                   "column": 8
                 },
                 "end": {
-                  "line": 7,
-                  "column": 54
+                  "line": 9,
+                  "column": 29
                 }
               },
               "callee": {
                 "type": "MemberExpression",
-                "start": 213,
-                "end": 235,
+                "start": 314,
+                "end": 325,
                 "loc": {
                   "start": {
-                    "line": 7,
+                    "line": 9,
                     "column": 8
                   },
                   "end": {
-                    "line": 7,
-                    "column": 30
+                    "line": 9,
+                    "column": 19
                   }
                 },
                 "object": {
                   "type": "Identifier",
-                  "start": 213,
-                  "end": 217,
+                  "start": 314,
+                  "end": 318,
                   "loc": {
                     "start": {
-                      "line": 7,
+                      "line": 9,
                       "column": 8
                     },
                     "end": {
-                      "line": 7,
+                      "line": 9,
                       "column": 12
                     },
                     "identifierName": "file"
@@ -378,59 +308,60 @@
                 },
                 "property": {
                   "type": "Identifier",
-                  "start": 218,
-                  "end": 235,
+                  "start": 319,
+                  "end": 325,
                   "loc": {
                     "start": {
-                      "line": 7,
+                      "line": 9,
                       "column": 13
                     },
                     "end": {
-                      "line": 7,
-                      "column": 30
+                      "line": 9,
+                      "column": 19
                     },
-                    "identifierName": "checkIfFileExists"
+                    "identifierName": "remove"
                   },
-                  "name": "checkIfFileExists"
+                  "name": "remove"
                 },
                 "computed": false
               },
               "arguments": [
                 {
-                  "type": "StringLiteral",
-                  "start": 236,
-                  "end": 252,
+                  "type": "ArrayExpression",
+                  "start": 326,
+                  "end": 334,
                   "loc": {
                     "start": {
-                      "line": 7,
-                      "column": 31
+                      "line": 9,
+                      "column": 20
                     },
                     "end": {
-                      "line": 7,
-                      "column": 47
+                      "line": 9,
+                      "column": 28
                     }
                   },
-                  "extra": {
-                    "rawValue": ".temp/test.txt",
-                    "raw": "'.temp/test.txt'"
-                  },
-                  "value": ".temp/test.txt"
-                },
-                {
-                  "type": "BooleanLiteral",
-                  "start": 254,
-                  "end": 258,
-                  "loc": {
-                    "start": {
-                      "line": 7,
-                      "column": 49
-                    },
-                    "end": {
-                      "line": 7,
-                      "column": 53
+                  "elements": [
+                    {
+                      "type": "StringLiteral",
+                      "start": 327,
+                      "end": 333,
+                      "loc": {
+                        "start": {
+                          "line": 9,
+                          "column": 21
+                        },
+                        "end": {
+                          "line": 9,
+                          "column": 27
+                        }
+                      },
+                      "extra": {
+                        "rawValue": "doc_",
+                        "raw": "'doc_'"
+                      },
+                      "value": "doc_"
                     }
-                  },
-                  "value": true
+                  ]
                 }
               ]
             },
@@ -441,9 +372,25 @@
         "leadingComments": [
           {
             "type": "CommentLine",
+            "value": "file.checkIfFolderExists('.temp', true);",
+            "start": 75,
+            "end": 117,
+            "loc": {
+              "start": {
+                "line": 4,
+                "column": 0
+              },
+              "end": {
+                "line": 4,
+                "column": 42
+              }
+            }
+          },
+          {
+            "type": "CommentLine",
             "value": " let f = file.create('.temp/test.txt');",
-            "start": 116,
-            "end": 157,
+            "start": 118,
+            "end": 159,
             "loc": {
               "start": {
                 "line": 5,
@@ -458,8 +405,8 @@
           {
             "type": "CommentLine",
             "value": " f.load('bin/test.js').then(() => f.save());",
-            "start": 158,
-            "end": 204,
+            "start": 160,
+            "end": 206,
             "loc": {
               "start": {
                 "line": 6,
@@ -470,41 +417,28 @@
                 "column": 46
               }
             }
-          }
-        ]
-      },
-      {
-        "type": "ExpressionStatement",
-        "start": 261,
-        "end": 276,
-        "loc": {
-          "start": {
-            "line": 8,
-            "column": 0
           },
-          "end": {
-            "line": 8,
-            "column": 15
-          }
-        },
-        "expression": {
-          "type": "CallExpression",
-          "start": 261,
-          "end": 275,
-          "loc": {
-            "start": {
-              "line": 8,
-              "column": 0
-            },
-            "end": {
-              "line": 8,
-              "column": 14
+          {
+            "type": "CommentLine",
+            "value": " let f = file.checkIfFileExists('.temp/test.txt', true);",
+            "start": 207,
+            "end": 265,
+            "loc": {
+              "start": {
+                "line": 7,
+                "column": 0
+              },
+              "end": {
+                "line": 7,
+                "column": 58
+              }
             }
           },
-          "callee": {
-            "type": "MemberExpression",
-            "start": 261,
-            "end": 272,
+          {
+            "type": "CommentLine",
+            "value": " let f = file.clean(['doc', 'doc_']);",
+            "start": 266,
+            "end": 305,
             "loc": {
               "start": {
                 "line": 8,
@@ -512,20 +446,65 @@
               },
               "end": {
                 "line": 8,
+                "column": 39
+              }
+            }
+          }
+        ]
+      },
+      {
+        "type": "ExpressionStatement",
+        "start": 337,
+        "end": 352,
+        "loc": {
+          "start": {
+            "line": 10,
+            "column": 0
+          },
+          "end": {
+            "line": 10,
+            "column": 15
+          }
+        },
+        "expression": {
+          "type": "CallExpression",
+          "start": 337,
+          "end": 351,
+          "loc": {
+            "start": {
+              "line": 10,
+              "column": 0
+            },
+            "end": {
+              "line": 10,
+              "column": 14
+            }
+          },
+          "callee": {
+            "type": "MemberExpression",
+            "start": 337,
+            "end": 348,
+            "loc": {
+              "start": {
+                "line": 10,
+                "column": 0
+              },
+              "end": {
+                "line": 10,
                 "column": 11
               }
             },
             "object": {
               "type": "Identifier",
-              "start": 261,
-              "end": 268,
+              "start": 337,
+              "end": 344,
               "loc": {
                 "start": {
-                  "line": 8,
+                  "line": 10,
                   "column": 0
                 },
                 "end": {
-                  "line": 8,
+                  "line": 10,
                   "column": 7
                 },
                 "identifierName": "console"
@@ -534,15 +513,15 @@
             },
             "property": {
               "type": "Identifier",
-              "start": 269,
-              "end": 272,
+              "start": 345,
+              "end": 348,
               "loc": {
                 "start": {
-                  "line": 8,
+                  "line": 10,
                   "column": 8
                 },
                 "end": {
-                  "line": 8,
+                  "line": 10,
                   "column": 11
                 },
                 "identifierName": "log"
@@ -554,15 +533,15 @@
           "arguments": [
             {
               "type": "Identifier",
-              "start": 273,
-              "end": 274,
+              "start": 349,
+              "end": 350,
               "loc": {
                 "start": {
-                  "line": 8,
+                  "line": 10,
                   "column": 12
                 },
                 "end": {
-                  "line": 8,
+                  "line": 10,
                   "column": 13
                 },
                 "identifierName": "f"
@@ -649,9 +628,25 @@
     },
     {
       "type": "CommentLine",
+      "value": "file.checkIfFolderExists('.temp', true);",
+      "start": 75,
+      "end": 117,
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 0
+        },
+        "end": {
+          "line": 4,
+          "column": 42
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
       "value": " let f = file.create('.temp/test.txt');",
-      "start": 116,
-      "end": 157,
+      "start": 118,
+      "end": 159,
       "loc": {
         "start": {
           "line": 5,
@@ -666,8 +661,8 @@
     {
       "type": "CommentLine",
       "value": " f.load('bin/test.js').then(() => f.save());",
-      "start": 158,
-      "end": 204,
+      "start": 160,
+      "end": 206,
       "loc": {
         "start": {
           "line": 6,
@@ -676,6 +671,38 @@
         "end": {
           "line": 6,
           "column": 46
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": " let f = file.checkIfFileExists('.temp/test.txt', true);",
+      "start": 207,
+      "end": 265,
+      "loc": {
+        "start": {
+          "line": 7,
+          "column": 0
+        },
+        "end": {
+          "line": 7,
+          "column": 58
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": " let f = file.clean(['doc', 'doc_']);",
+      "start": 266,
+      "end": 305,
+      "loc": {
+        "start": {
+          "line": 8,
+          "column": 0
+        },
+        "end": {
+          "line": 8,
+          "column": 39
         }
       }
     }
@@ -961,20 +988,10 @@
       }
     },
     {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "file",
+      "type": "CommentLine",
+      "value": "file.checkIfFolderExists('.temp', true);",
       "start": 75,
-      "end": 79,
+      "end": 117,
       "loc": {
         "start": {
           "line": 4,
@@ -982,224 +999,15 @@
         },
         "end": {
           "line": 4,
-          "column": 4
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ".",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "start": 79,
-      "end": 80,
-      "loc": {
-        "start": {
-          "line": 4,
-          "column": 4
-        },
-        "end": {
-          "line": 4,
-          "column": 5
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "checkIfFolderExists",
-      "start": 80,
-      "end": 99,
-      "loc": {
-        "start": {
-          "line": 4,
-          "column": 5
-        },
-        "end": {
-          "line": 4,
-          "column": 24
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 99,
-      "end": 100,
-      "loc": {
-        "start": {
-          "line": 4,
-          "column": 24
-        },
-        "end": {
-          "line": 4,
-          "column": 25
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "string",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": ".temp",
-      "start": 100,
-      "end": 107,
-      "loc": {
-        "start": {
-          "line": 4,
-          "column": 25
-        },
-        "end": {
-          "line": 4,
-          "column": 32
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ",",
-        "beforeExpr": true,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "start": 107,
-      "end": 108,
-      "loc": {
-        "start": {
-          "line": 4,
-          "column": 32
-        },
-        "end": {
-          "line": 4,
-          "column": 33
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "true",
-        "keyword": "true",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "true",
-      "start": 109,
-      "end": 113,
-      "loc": {
-        "start": {
-          "line": 4,
-          "column": 34
-        },
-        "end": {
-          "line": 4,
-          "column": 38
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 113,
-      "end": 114,
-      "loc": {
-        "start": {
-          "line": 4,
-          "column": 38
-        },
-        "end": {
-          "line": 4,
-          "column": 39
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ";",
-        "beforeExpr": true,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "start": 114,
-      "end": 115,
-      "loc": {
-        "start": {
-          "line": 4,
-          "column": 39
-        },
-        "end": {
-          "line": 4,
-          "column": 40
+          "column": 42
         }
       }
     },
     {
       "type": "CommentLine",
       "value": " let f = file.create('.temp/test.txt');",
-      "start": 116,
-      "end": 157,
+      "start": 118,
+      "end": 159,
       "loc": {
         "start": {
           "line": 5,
@@ -1214,8 +1022,8 @@
     {
       "type": "CommentLine",
       "value": " f.load('bin/test.js').then(() => f.save());",
-      "start": 158,
-      "end": 204,
+      "start": 160,
+      "end": 206,
       "loc": {
         "start": {
           "line": 6,
@@ -1224,6 +1032,38 @@
         "end": {
           "line": 6,
           "column": 46
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": " let f = file.checkIfFileExists('.temp/test.txt', true);",
+      "start": 207,
+      "end": 265,
+      "loc": {
+        "start": {
+          "line": 7,
+          "column": 0
+        },
+        "end": {
+          "line": 7,
+          "column": 58
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": " let f = file.clean(['doc', 'doc_']);",
+      "start": 266,
+      "end": 305,
+      "loc": {
+        "start": {
+          "line": 8,
+          "column": 0
+        },
+        "end": {
+          "line": 8,
+          "column": 39
         }
       }
     },
@@ -1242,15 +1082,15 @@
         "updateContext": null
       },
       "value": "let",
-      "start": 205,
-      "end": 208,
+      "start": 306,
+      "end": 309,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 9,
           "column": 0
         },
         "end": {
-          "line": 7,
+          "line": 9,
           "column": 3
         }
       }
@@ -1268,15 +1108,15 @@
         "binop": null
       },
       "value": "f",
-      "start": 209,
-      "end": 210,
+      "start": 310,
+      "end": 311,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 9,
           "column": 4
         },
         "end": {
-          "line": 7,
+          "line": 9,
           "column": 5
         }
       }
@@ -1295,15 +1135,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 211,
-      "end": 212,
+      "start": 312,
+      "end": 313,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 9,
           "column": 6
         },
         "end": {
-          "line": 7,
+          "line": 9,
           "column": 7
         }
       }
@@ -1321,15 +1161,15 @@
         "binop": null
       },
       "value": "file",
-      "start": 213,
-      "end": 217,
+      "start": 314,
+      "end": 318,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 9,
           "column": 8
         },
         "end": {
-          "line": 7,
+          "line": 9,
           "column": 12
         }
       }
@@ -1347,15 +1187,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 217,
-      "end": 218,
+      "start": 318,
+      "end": 319,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 9,
           "column": 12
         },
         "end": {
-          "line": 7,
+          "line": 9,
           "column": 13
         }
       }
@@ -1372,17 +1212,17 @@
         "postfix": false,
         "binop": null
       },
-      "value": "checkIfFileExists",
-      "start": 218,
-      "end": 235,
+      "value": "remove",
+      "start": 319,
+      "end": 325,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 9,
           "column": 13
         },
         "end": {
-          "line": 7,
-          "column": 30
+          "line": 9,
+          "column": 19
         }
       }
     },
@@ -1398,16 +1238,42 @@
         "postfix": false,
         "binop": null
       },
-      "start": 235,
-      "end": 236,
+      "start": 325,
+      "end": 326,
       "loc": {
         "start": {
-          "line": 7,
-          "column": 30
+          "line": 9,
+          "column": 19
         },
         "end": {
-          "line": 7,
-          "column": 31
+          "line": 9,
+          "column": 20
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "[",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 326,
+      "end": 327,
+      "loc": {
+        "start": {
+          "line": 9,
+          "column": 20
+        },
+        "end": {
+          "line": 9,
+          "column": 21
         }
       }
     },
@@ -1424,24 +1290,24 @@
         "binop": null,
         "updateContext": null
       },
-      "value": ".temp/test.txt",
-      "start": 236,
-      "end": 252,
+      "value": "doc_",
+      "start": 327,
+      "end": 333,
       "loc": {
         "start": {
-          "line": 7,
-          "column": 31
+          "line": 9,
+          "column": 21
         },
         "end": {
-          "line": 7,
-          "column": 47
+          "line": 9,
+          "column": 27
         }
       }
     },
     {
       "type": {
-        "label": ",",
-        "beforeExpr": true,
+        "label": "]",
+        "beforeExpr": false,
         "startsExpr": false,
         "rightAssociative": false,
         "isLoop": false,
@@ -1451,44 +1317,16 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 252,
-      "end": 253,
+      "start": 333,
+      "end": 334,
       "loc": {
         "start": {
-          "line": 7,
-          "column": 47
+          "line": 9,
+          "column": 27
         },
         "end": {
-          "line": 7,
-          "column": 48
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "true",
-        "keyword": "true",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "true",
-      "start": 254,
-      "end": 258,
-      "loc": {
-        "start": {
-          "line": 7,
-          "column": 49
-        },
-        "end": {
-          "line": 7,
-          "column": 53
+          "line": 9,
+          "column": 28
         }
       }
     },
@@ -1504,16 +1342,16 @@
         "postfix": false,
         "binop": null
       },
-      "start": 258,
-      "end": 259,
+      "start": 334,
+      "end": 335,
       "loc": {
         "start": {
-          "line": 7,
-          "column": 53
+          "line": 9,
+          "column": 28
         },
         "end": {
-          "line": 7,
-          "column": 54
+          "line": 9,
+          "column": 29
         }
       }
     },
@@ -1530,16 +1368,16 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 259,
-      "end": 260,
+      "start": 335,
+      "end": 336,
       "loc": {
         "start": {
-          "line": 7,
-          "column": 54
+          "line": 9,
+          "column": 29
         },
         "end": {
-          "line": 7,
-          "column": 55
+          "line": 9,
+          "column": 30
         }
       }
     },
@@ -1556,15 +1394,15 @@
         "binop": null
       },
       "value": "console",
-      "start": 261,
-      "end": 268,
+      "start": 337,
+      "end": 344,
       "loc": {
         "start": {
-          "line": 8,
+          "line": 10,
           "column": 0
         },
         "end": {
-          "line": 8,
+          "line": 10,
           "column": 7
         }
       }
@@ -1582,15 +1420,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 268,
-      "end": 269,
+      "start": 344,
+      "end": 345,
       "loc": {
         "start": {
-          "line": 8,
+          "line": 10,
           "column": 7
         },
         "end": {
-          "line": 8,
+          "line": 10,
           "column": 8
         }
       }
@@ -1608,15 +1446,15 @@
         "binop": null
       },
       "value": "log",
-      "start": 269,
-      "end": 272,
+      "start": 345,
+      "end": 348,
       "loc": {
         "start": {
-          "line": 8,
+          "line": 10,
           "column": 8
         },
         "end": {
-          "line": 8,
+          "line": 10,
           "column": 11
         }
       }
@@ -1633,15 +1471,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 272,
-      "end": 273,
+      "start": 348,
+      "end": 349,
       "loc": {
         "start": {
-          "line": 8,
+          "line": 10,
           "column": 11
         },
         "end": {
-          "line": 8,
+          "line": 10,
           "column": 12
         }
       }
@@ -1659,15 +1497,15 @@
         "binop": null
       },
       "value": "f",
-      "start": 273,
-      "end": 274,
+      "start": 349,
+      "end": 350,
       "loc": {
         "start": {
-          "line": 8,
+          "line": 10,
           "column": 12
         },
         "end": {
-          "line": 8,
+          "line": 10,
           "column": 13
         }
       }
@@ -1684,15 +1522,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 274,
-      "end": 275,
+      "start": 350,
+      "end": 351,
       "loc": {
         "start": {
-          "line": 8,
+          "line": 10,
           "column": 13
         },
         "end": {
-          "line": 8,
+          "line": 10,
           "column": 14
         }
       }
@@ -1710,15 +1548,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 275,
-      "end": 276,
+      "start": 351,
+      "end": 352,
       "loc": {
         "start": {
-          "line": 8,
+          "line": 10,
           "column": 14
         },
         "end": {
-          "line": 8,
+          "line": 10,
           "column": 15
         }
       }
@@ -1736,15 +1574,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 278,
-      "end": 278,
+      "start": 354,
+      "end": 354,
       "loc": {
         "start": {
-          "line": 10,
+          "line": 12,
           "column": 0
         },
         "end": {
-          "line": 10,
+          "line": 12,
           "column": 0
         }
       }

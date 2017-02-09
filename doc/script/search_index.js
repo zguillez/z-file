@@ -3936,6 +3936,12 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
+    "z-file/src/zfile.js~zfile#clean",
+    "class/z-file/src/Zfile.js~Zfile.html#instance-method-clean",
+    "z-file/src/Zfile.js~Zfile#clean",
+    "method"
+  ],
+  [
     "z-file/src/zfile.js~zfile#constructor",
     "class/z-file/src/Zfile.js~Zfile.html#instance-constructor-constructor",
     "z-file/src/Zfile.js~Zfile#constructor",
@@ -3975,6 +3981,12 @@ window.esdocSearchIndex = [
     "z-file/src/zfile.js~zfile#read",
     "class/z-file/src/Zfile.js~Zfile.html#instance-method-read",
     "z-file/src/Zfile.js~Zfile#read",
+    "method"
+  ],
+  [
+    "z-file/src/zfile.js~zfile#remove",
+    "class/z-file/src/Zfile.js~Zfile.html#instance-method-remove",
+    "z-file/src/Zfile.js~Zfile#remove",
     "method"
   ],
   [

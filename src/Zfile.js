@@ -1,5 +1,6 @@
 'use strict';
 const fs = require('fs');
+const del = require('del');
 const fileType = require('file-type');
 const ZfileObject = require('./ZfileObject.js');
 /**
@@ -112,6 +113,40 @@ class Zfile {
    */
   files(dir) {
     return fs.readdirSync(dir).filter(f => fs.statSync(dir + "/" + f).isFile());
+  }
+
+  /**
+   * Elimina el contenido de una o varias carpetas
+   * @param dir {String|Array} - Ruta de la carpeta o lista de carpetas para vaciar
+   * @returns {Array} - Listado de ficheros eliminados
+   */
+  clean(dir) {
+    let dirs = [];
+    if(Array.isArray(dir)) {
+      for(let d of dir) {
+        dirs.push(`${d}/*`);
+      }
+    } else {
+      dirs.push(`${dir}/*`);
+    }
+    return del.sync(dirs);
+  }
+
+  /**
+   * Elimina una o varias carpetas
+   * @param dir {String|Array} - Ruta de la carpeta o lista de carpetas para eliminar
+   * @returns {Array} - Listado de las carpetas eliminadas
+   */
+  remove(dir) {
+    let dirs = [];
+    if(Array.isArray(dir)) {
+      for(let d of dir) {
+        dirs.push(`${d}`);
+      }
+    } else {
+      dirs.push(`${dir}`);
+    }
+    return del.sync(dirs);
   }
 
   /**

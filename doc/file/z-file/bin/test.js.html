@@ -43,10 +43,12 @@
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">#!/usr/local/bin/node
 &apos;use strict&apos;;
 let file = require(&apos;../src/Zfile.js&apos;);
-file.checkIfFolderExists(&apos;.temp&apos;, true);
+//file.checkIfFolderExists(&apos;.temp&apos;, true);
 // let f = file.create(&apos;.temp/test.txt&apos;);
 // f.load(&apos;bin/test.js&apos;).then(() =&gt; f.save());
-let f = file.checkIfFileExists(&apos;.temp/test.txt&apos;, true);
+// let f = file.checkIfFileExists(&apos;.temp/test.txt&apos;, true);
+// let f = file.clean([&apos;doc&apos;, &apos;doc_&apos;]);
+let f = file.remove([&apos;doc_&apos;]);
 console.log(f);
 
 </code></pre>

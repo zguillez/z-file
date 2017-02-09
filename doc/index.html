@@ -62,6 +62,12 @@
 <pre><code><code class="source-code prettyprint">console.log( zfile.file(&apos;./src/data.txt&apos;) ); //true or false</code>
 </code></pre><h3 id="create-file-if-not-exists">Create file if not exists</h3>
 <pre><code><code class="source-code prettyprint">console.log( zfile.file(&apos;./src/data.txt&apos;, true) ); //true</code>
+</code></pre><h3 id="remove-all-files-in-a-folder">Remove all files in a folder</h3>
+<pre><code><code class="source-code prettyprint">console.log( zfile.clean(&apos;./src/data&apos;) );
+console.log( zfile.clean([&apos;./src/data&apos;, &apos;./src/assets&apos;]) );</code>
+</code></pre><h3 id="remove-a-folder">Remove a folder</h3>
+<pre><code><code class="source-code prettyprint">console.log( zfile.remove(&apos;./src/data&apos;) );
+console.log( zfile.remove([&apos;./src/data&apos;, &apos;./src/assets&apos;]) );</code>
 </code></pre><h1 id="use-as-object">Use as object</h1>
 <pre><code><code class="source-code prettyprint">let f1 = zfile.create(&apos;./data/file.txt&apos;);
 f1.data = &apos;Hello world!;

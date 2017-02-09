@@ -42,6 +42,7 @@
 <div class="content" data-ice="content"><h1 data-ice="title">z-file/src/Zfile.js</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">&apos;use strict&apos;;
 const fs = require(&apos;fs&apos;);
+const del = require(&apos;del&apos;);
 const fileType = require(&apos;file-type&apos;);
 const ZfileObject = require(&apos;./ZfileObject.js&apos;);
 /**
@@ -86,7 +87,7 @@ class Zfile {
       let arr = filename.split(&apos;/&apos;);
       let name = arr[arr.length - 1];
       let dir = filename.replace(name, &apos;&apos;);
-      this.checkIfFolderExists(dir, true);
+      this.folder(dir, true);
       fs.writeFile(filename, data, (err) =&gt; {
         if(err) {
           reject(err);
@@ -154,6 +155,40 @@ class Zfile {
    */
   files(dir) {
     return fs.readdirSync(dir).filter(f =&gt; fs.statSync(dir + &quot;/&quot; + f).isFile());
+  }
+
+  /**
+   * Elimina el contenido de una o varias carpetas
+   * @param dir {String|Array} - Ruta de la carpeta o lista de carpetas para vaciar
+   * @returns {Array} - Listado de ficheros eliminados
+   */
+  clean(dir) {
+    let dirs = [];
+    if(Array.isArray(dir)) {
+      for(let d of dir) {
+        dirs.push(`${d}/*`);
+      }
+    } else {
+      dirs.push(`${dir}/*`);
+    }
+    return del.sync(dirs);
+  }
+
+  /**
+   * Elimina una o varias carpetas
+   * @param dir {String|Array} - Ruta de la carpeta o lista de carpetas para eliminar
+   * @returns {Array} - Listado de las carpetas eliminadas
+   */
+  remove(dir) {
+    let dirs = [];
+    if(Array.isArray(dir)) {
+      for(let d of dir) {
+        dirs.push(`${d}`);
+      }
+    } else {
+      dirs.push(`${dir}`);
+    }
+    return del.sync(dirs);
   }
 
   /**

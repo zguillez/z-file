@@ -52,6 +52,20 @@ console.log( zfile.file('./src/data.txt') ); //true or false
 console.log( zfile.file('./src/data.txt', true) ); //true
 ```
 
+### Remove all files in a folder
+
+```
+console.log( zfile.clean('./src/data') );
+console.log( zfile.clean(['./src/data', './src/assets']) );
+```
+
+### Remove a folder
+
+```
+console.log( zfile.remove('./src/data') );
+console.log( zfile.remove(['./src/data', './src/assets']) );
+```
+
 # Use as object
 ```
 let f1 = zfile.create('./data/file.txt');
