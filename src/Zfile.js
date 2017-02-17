@@ -112,7 +112,7 @@ class Zfile {
    * @returns {Array} - Array con los nombre de los ficheros
    */
   files(dir) {
-    return fs.readdirSync(dir).filter(f => fs.statSync(dir + "/" + f).isFile());
+    return fs.readdirSync(dir).filter(f => fs.statSync(dir + "/" + f).isFile()).filter(f => !(/(^|\/)\.[^\/\.]/g).test(f));
   }
 
   /**
