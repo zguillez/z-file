@@ -36,6 +36,32 @@ class Zfile {
   };
 
   /**
+   * Lee un listado de ficheros
+   * @param {Array} filenames - Los nombres de los ficheros
+   * @return {Promise}
+   */
+  reads(filenames) {
+    return new Promise((resolve, reject) => {
+      let total = filenames.length;
+      let index = 1;
+      let that = this;
+      let data = [];
+      let _read = function (id) {
+        that.read(filenames[index - 1]).then((_data) => {
+          data.push(_data);
+          if (index < total) {
+            index++;
+            _read(index);
+          } else {
+            resolve(data);
+          }
+        }).catch((err) => reject(err));
+      }
+      _read(index);
+    });
+  };
+
+  /**
    * Guarda un fichero
    * @param {string} filename - El nombre del fichero
    * @param {string} data - Los datos para guardar
