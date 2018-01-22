@@ -1,13 +1,13 @@
 'use strict';
-const fs = require('fs');
 const fileType = require('file-type');
+
 /**
  * Class ZfileObject
  * Genera un objecto que puede leer y guardar datos en ficheros
  */
 class ZfileObject {
   /**
-   *
+   * @param {string} engine
    * @param {string} path - El nombre del fichero
    */
   constructor(engine, path) {
@@ -34,14 +34,14 @@ class ZfileObject {
 
   /**
    * Lee datos de un fichero
-   * @param filename
-   * @returns {Promise}
+   * @param {string} filename
+   * @return {Promise}
    */
   load(filename) {
     this.filename = (filename) ? filename : this.path;
     this.path = (this.path) ? this.path : this.filename;
     return new Promise((resolve, reject) => {
-      if(! this.filename && ! this.path) {
+      if (!this.filename && !this.path) {
         reject(new Error('Null filepath'));
       } else {
         this.engine.read(this.filename).then((data) => {
@@ -54,8 +54,8 @@ class ZfileObject {
 
   /**
    * Guarda datos en un fichero
-   * @param path
-   * @returns {Promise}
+   * @param {string} path
+   * @return {Promise}
    */
   save(path) {
     this.path = (path) ? path : this.path;
@@ -68,10 +68,11 @@ class ZfileObject {
 
   /**
    * Obtiene el tipo de datos
+   * @return {string}
    */
   fileType() {
     let type = fileType(this.data);
-    if(! type) {
+    if (!type) {
       let arr = this.path.split('.');
       type = {
         ext: arr[arr.length - 1],
@@ -81,8 +82,8 @@ class ZfileObject {
     return type;
   };
 }
+
 /**
- *
  * @type {ZfileObject}
  */
 module.exports = ZfileObject;

@@ -1,6 +1,6 @@
 {
   "name": "z-file",
-  "version": "0.3.3",
+  "version": "0.4.0",
   "description": "Tools for file streams",
   "author": "Guillermo de la Iglesia - zguillez.io",
   "repository": "git+https://github.com/zguillez/z-file.git",
@@ -13,7 +13,7 @@
   "main": "index.js",
   "scripts": {
     "test": "bin/test.js",
-    "lint": "eslint index.js bin/*.js --fix || true",
+    "lint": "eslint index.js src/*.js bin/*.js --fix || true",
     "doc": "rimraf doc/* && esdoc"
   },
   "devDependencies": {
