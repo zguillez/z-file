@@ -1,9 +1,13 @@
 {
   "name": "z-file",
-  "version": "0.4.1",
+  "version": "0.4.3",
   "description": "Tools for file streams",
-  "author": "Guillermo de la Iglesia - zguillez.io",
-  "repository": "git+https://github.com/zguillez/z-file.git",
+  "author": {
+    "name": "Guillermo de la Iglesia",
+    "email": "mail@zguillez.io",
+    "url": "https://github.com/zguillez"
+  },
+  "repository": "https://github.com/zguillez/z-file.git",
   "keywords": [
     "nodejs",
     "file",
@@ -13,20 +17,16 @@
   "main": "index.js",
   "scripts": {
     "test": "bin/test.js",
-    "lint": "eslint index.js src/*.js bin/*.js --fix || true",
-    "doc": "rimraf doc/* && esdoc"
+    "lint": "eslint index.js src/*.js bin/*.js --fix || true"
   },
   "devDependencies": {
-    "esdoc": "latest",
-    "esdoc-node": "latest",
-    "esdoc-node-plugin": "latest",
-    "eslint": "latest",
-    "eslint-config-google": "latest",
-    "eslint-plugin-html": "latest"
+    "eslint": "^5.9.0",
+    "eslint-config-google": "^0.11.0",
+    "eslint-plugin-html": "^5.0.0"
   },
-  "license": "MIT",
   "dependencies": {
-    "del": "latest",
-    "file-type": "latest"
-  }
+    "del": "^3.0.0",
+    "file-type": "^10.5.0"
+  },
+  "license": "MIT"
 }

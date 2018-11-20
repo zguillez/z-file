@@ -42,21 +42,21 @@ class Zfile {
    */
   reads(filenames) {
     return new Promise((resolve, reject) => {
-      let total = filenames.length;
       let index = 1;
-      let that = this;
-      let data = [];
-      let _read = function (id) {
+      const total = filenames.length;
+      const that = this;
+      const data = [];
+      const _read = function(id) {
         that.read(filenames[index - 1]).then((_data) => {
           data.push(_data);
           if (index < total) {
-            index++;
+            index ++;
             _read(index);
           } else {
             resolve(data);
           }
         }).catch((err) => reject(err));
-      }
+      };
       _read(index);
     });
   };
@@ -69,9 +69,9 @@ class Zfile {
    */
   write(filename, data) {
     return new Promise((resolve, reject) => {
-      let arr = filename.split('/');
-      let name = arr[arr.length - 1];
-      let dir = filename.replace(name, '');
+      const arr = filename.split('/');
+      const name = arr[arr.length - 1];
+      const dir = filename.replace(name, '');
       this.folder(dir, true);
       fs.writeFile(filename, data, (err) => {
         if (err) {
@@ -84,13 +84,31 @@ class Zfile {
   };
 
   /**
+   * Sustituye un string del fichero
+   * @param {string} filename - El nombre del fichero
+   * @param {string} data1 - Los datos a buscar
+   * @param {string} data2 - Los datos a introducir
+   * @return {Promise}
+   */
+  replace(filename, data1, data2) {
+    return new Promise((resolve, reject) => {
+      this.read(filename).then((data) => {
+        const regexp = new RegExp(data1, 'ig');
+        data = data.replace(regexp, data2);
+        console.log(data);
+        this.write(filename, data).then(() => resolve(true)).catch(() => reject(err));
+      });
+    });
+  };
+
+  /**
    * Comprueba si una ruta de carpetas existe
    * @param {string} dir - Ruta de la carpeta
    * @param {boolean} create - Indica si se debe de crear las carpetas inexistentes
    * @return {boolean}
    */
   folder(dir, create = false) {
-    if (!fs.existsSync(dir)) {
+    if (! fs.existsSync(dir)) {
       if (create) {
         fs.mkdirSync(dir);
         return true;
@@ -139,7 +157,7 @@ class Zfile {
    * @return {Array} - Array con los nombre de los ficheros
    */
   files(dir) {
-    return fs.readdirSync(dir).filter((f) => fs.statSync(dir + '/' + f).isFile()).filter((f) => !(/(^|\/)\.[^\/\.]/g).test(f));
+    return fs.readdirSync(dir).filter((f) => fs.statSync(dir + '/' + f).isFile()).filter((f) => ! (/(^|\/)\.[^\/\.]/g).test(f));
   }
 
   /**
@@ -148,9 +166,9 @@ class Zfile {
    * @return {Array} - Listado de ficheros eliminados
    */
   clean(dir) {
-    let dirs = [];
+    const dirs = [];
     if (Array.isArray(dir)) {
-      for (let d of dir) {
+      for (const d of dir) {
         dirs.push(`${d}/*`);
       }
     } else {
@@ -165,9 +183,9 @@ class Zfile {
    * @return {Array} - Listado de las carpetas eliminadas
    */
   remove(dir) {
-    let dirs = [];
+    const dirs = [];
     if (Array.isArray(dir)) {
-      for (let d of dir) {
+      for (const d of dir) {
         dirs.push(`${d}`);
       }
     } else {
