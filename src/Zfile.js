@@ -95,7 +95,6 @@ class Zfile {
       this.read(filename).then((data) => {
         const regexp = new RegExp(data1, 'ig');
         data = data.replace(regexp, data2);
-        console.log(data);
         this.write(filename, data).then(() => resolve(true)).catch(() => reject(err));
       });
     });
