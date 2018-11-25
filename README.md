@@ -152,6 +152,12 @@ zfile.psdToJpg('300x250.psd', '300x250.jpg', 80)
   .catch((err) => console.log(err));
 ```
 
+## Create a dummy JPEG image
+
+```
+zfile.dummy(300, 250, '#FF2200', 'dummy.jpg');
+```
+
 # Contributing and issues
 Contributors are welcome, please fork and send pull requests! If you have any ideas on how to make this project better then please submit an issue or send me an [email](mailto:mail@zguillez.io).
 
@@ -164,6 +170,7 @@ Original code licensed under [MIT](https://en.wikipedia.org/wiki/MIT_License) Op
 
 ### v0.5.0 (November 25, 2018)
 * Create PNG and JPEG images from PSD file
+* Create dummy JPEG images
 
 ### v0.4.0 (November 20, 2018)
 * Replace string on files function

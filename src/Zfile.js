@@ -2,6 +2,8 @@
 const fs = require('fs');
 const del = require('del');
 const fileType = require('file-type');
+const Jimp = require('jimp');
+const {GifFrame, GifUtil} = require('gifwrap');
 const PSD = require('psd');
 const pngToJpg = require('png-jpg');
 const ZfileObject = require('./ZfileObject.js');
@@ -246,6 +248,43 @@ class Zfile {
           });
         });
       }).catch((err) => reject(err));
+    });
+  }
+
+  /**
+   * Genera un archivo Jpeg dummy de imagen
+   * @param {integer} width - Ancho del fichero JPG
+   * @param {integer} height - Alto del fichero JPG
+   * @param {string} color - Color fichero JPG
+   * @param {string} output - Ruta del fichero JPG
+   * @return {Promise}
+   */
+  dummy(width, height, color, output) {
+    return new Promise((resolve, reject) => {
+      new Jimp(width, height, color, (err, image) => {
+        if (! err) {
+          Jimp.loadFont(Jimp.FONT_SANS_32_WHITE).then((font) => {
+            image.opaque();
+            image.print(font, 0, 0, {
+              text: `${width}x${height}`,
+              alignmentX: Jimp.HORIZONTAL_ALIGN_CENTER,
+              alignmentY: Jimp.VERTICAL_ALIGN_MIDDLE,
+            }, width, height);
+            image.quality(80);
+            image.write(output);
+          });
+        }
+      });
+    });
+  }
+
+  /**
+   * Genera un archivo Gif dummy de imagen
+   * @param {string} output - Ruta del fichero GIF
+   * @return {Promise}
+   */
+  dummyGif(output) {
+    return new Promise((resolve, reject) => {
     });
   }
 }
