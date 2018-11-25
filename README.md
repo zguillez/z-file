@@ -136,6 +136,22 @@ zfile.folders('./data').forEach((folder) => {
   });
 ```
 
+## Create a PNG image from a PSD file
+
+```
+zfile.psdToPng('300x250.psd', '300x250.png')
+  .then(() => console.log('Done!'))
+  .catch((err) => console.log(err));
+```
+
+## Create a JPEG image from a PSD file
+
+```
+zfile.psdToJpg('300x250.psd', '300x250.jpg', 80)
+  .then(() => console.log('Done!'))
+  .catch((err) => console.log(err));
+```
+
 # Contributing and issues
 Contributors are welcome, please fork and send pull requests! If you have any ideas on how to make this project better then please submit an issue or send me an [email](mailto:mail@zguillez.io).
 
@@ -145,6 +161,9 @@ Contributors are welcome, please fork and send pull requests! If you have any id
 Original code licensed under [MIT](https://en.wikipedia.org/wiki/MIT_License) Open Source projects used within this project retain their original licenses.
 
 # Changelog
+
+### v0.5.0 (November 25, 2018)
+* Create PNG and JPEG images from PSD file
 
 ### v0.4.0 (November 20, 2018)
 * Replace string on files function
