@@ -13,5 +13,6 @@ const zfile = require('../src/Zfile.js');
 /* zfile.psdToJpg('300x250.psd', '300x250.jpg', 80)
     .then(() => console.log('ok'))
     .catch((err) => console.log(err));*/
-zfile.dummy(300, 250, '#FF2200', 'dummy.jpg');
+// zfile.dummy(300, 250, '#FF2200', 'dummy.jpg');
+zfile.dummy(300, 250, '#ffb65b', 'dummy.gif');
 console.log('done!');

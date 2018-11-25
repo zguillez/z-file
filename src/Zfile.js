@@ -253,8 +253,8 @@ class Zfile {
 
   /**
    * Genera un archivo Jpeg dummy de imagen
-   * @param {integer} width - Ancho del fichero JPG
-   * @param {integer} height - Alto del fichero JPG
+   * @param {number} width - Ancho del fichero JPG
+   * @param {number} height - Alto del fichero JPG
    * @param {string} color - Color fichero JPG
    * @param {string} output - Ruta del fichero JPG
    * @return {Promise}
@@ -270,8 +270,16 @@ class Zfile {
               alignmentX: Jimp.HORIZONTAL_ALIGN_CENTER,
               alignmentY: Jimp.VERTICAL_ALIGN_MIDDLE,
             }, width, height);
-            image.quality(80);
-            image.write(output);
+            if (output.split('.')[1] === 'gif') {
+              const frame = new GifFrame(width, height, {
+                delayCentisecs: 100,
+              });
+              frame.bitmap = image.bitmap;
+              GifUtil.write(output, [frame]);
+            } else {
+              image.quality(80);
+              image.write(output);
+            }
           });
         }
       });
