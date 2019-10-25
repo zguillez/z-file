@@ -111,7 +111,7 @@ class Zfile {
    * @return {boolean}
    */
   folder(dir, create = false) {
-    if (! fs.existsSync(dir)) {
+    if (!fs.existsSync(dir)) {
       if (create) {
         fs.mkdirSync(dir);
         return true;
@@ -160,7 +160,7 @@ class Zfile {
    * @return {Array} - Array con los nombre de los ficheros
    */
   files(dir) {
-    return fs.readdirSync(dir).filter((f) => fs.statSync(dir + '/' + f).isFile()).filter((f) => ! (/(^|\/)\.[^\/\.]/g).test(f));
+    return fs.readdirSync(dir).filter((f) => fs.statSync(dir + '/' + f).isFile()).filter((f) => !(/(^|\/)\.[^\/\.]/g).test(f));
   }
 
   /**
@@ -262,7 +262,7 @@ class Zfile {
   dummy(width, height, color, output) {
     return new Promise((resolve, reject) => {
       new Jimp(width, height, color, (err, image) => {
-        if (! err) {
+        if (!err) {
           Jimp.loadFont(Jimp.FONT_SANS_32_WHITE).then((font) => {
             image.opaque();
             image.print(font, 0, 0, {
