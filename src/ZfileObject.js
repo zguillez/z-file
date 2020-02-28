@@ -41,7 +41,7 @@ class ZfileObject {
     this.filename = (filename) ? filename : this.path;
     this.path = (this.path) ? this.path : this.filename;
     return new Promise((resolve, reject) => {
-      if (! this.filename && ! this.path) {
+      if (!this.filename && !this.path) {
         reject(new Error('Null filepath'));
       } else {
         this.engine.read(this.filename).then((data) => {
@@ -72,7 +72,7 @@ class ZfileObject {
    */
   fileType() {
     let type = fileType(this.data);
-    if (! type) {
+    if (!type) {
       const arr = this.path.split('.');
       type = {
         ext: arr[arr.length - 1],
