@@ -26,7 +26,7 @@ class Zfile {
         if (err) {
           reject(err);
         } else {
-          if (fileType(data)) {
+          if (getFileType(data)) {
             resolve(data);
           } else {
             resolve(data.toString());

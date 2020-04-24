@@ -70,7 +70,7 @@ class ZfileObject {
    * Obtiene el tipo de datos
    * @return {string}
    */
-  fileType() {
+  getFileType() {
     let type = fileType(this.data);
     if (!type) {
       const arr = this.path.split('.');
