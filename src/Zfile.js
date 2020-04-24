@@ -25,7 +25,7 @@ class Zfile {
         if (err) {
           reject(err);
         } else {
-          if (fileType(data)) {
+          if (fileType.fromBuffer(data)) {
             resolve(data);
           } else {
             resolve(data.toString());
@@ -309,7 +309,7 @@ class ZfileObject {
    * @return {string}
    */
   getFileType() {
-    let type = fileType(this.data);
+    let type = fileType.fromBuffer(this.data);
     if (!type) {
       const arr = this.path.split('.');
       type = {
