@@ -50,11 +50,11 @@ class Zfile {
       const total = filenames.length;
       const that = this;
       const data = [];
-      const _read = function(id) {
+      const _read = function (id) {
         that.read(filenames[index - 1]).then((_data) => {
           data.push(_data);
           if (index < total) {
-            index ++;
+            index++;
             _read(index);
           } else {
             resolve(data);

@@ -1,4 +1,3 @@
-#!/usr/local/bin/node
 'use strict';
 const zfile = require('../src/Zfile.js');
 // zfile.checkIfFolderExists('.temp', true);
@@ -14,5 +13,5 @@ const zfile = require('../src/Zfile.js');
     .then(() => console.log('ok'))
     .catch((err) => console.log(err));*/
 // zfile.dummy(300, 250, '#FF2200', 'dummy.jpg');
-zfile.dummy(300, 250, '#ffb65b', 'dummy.gif');
+// zfile.dummy(300, 250, '#ffb65b', 'dummy.gif');
 console.log('done!');

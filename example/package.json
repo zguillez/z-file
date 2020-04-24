@@ -1,0 +1,11 @@
+{
+  "name": "example",
+  "version": "1.2.1",
+  "description": "",
+  "license": "MIT",
+  "author": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./index.js"
+  }
+}
