@@ -1,6 +1,6 @@
 {
   "name": "z-file",
-  "version": "0.5.13",
+  "version": "0.5.14",
   "description": "Tools for file streams",
   "keywords": [
     "nodejs",
@@ -19,7 +19,6 @@
   "main": "index.js",
   "scripts": {
     "clean": "rimraf .temp/*",
-    "doc": "rimraf doc/* && esdoc",
     "lint": "eslint index.js bin/*.js --fix || true",
     "prepare": "npm run lint && npm run test && sort-package-json && bin/prepare.js",
     "test": "jest --coverage",
@@ -28,10 +27,8 @@
   "dependencies": {
     "del": "^5.1.0",
     "file-type": "^14.2.0",
-    "gifwrap": "^0.9.2",
     "jimp": "^0.10.3",
     "minimist": "^1.2.5",
-    "png-jpg": "^0.0.2",
     "replace": "^1.2.0",
     "shelljs": "0.8.3"
   },

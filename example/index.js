@@ -1,6 +1,6 @@
 'use strict';
 const zfile = require('../src/Zfile.js');
-// zfile.checkIfFolderExists('.temp', true);
+zfile.checkIfFolderExists('.temp', true);
 // let f = zfile.create('.temp/test.txt');
 // f.load('bin/test.js').then(() => f.save());
 // let f = zfile.checkIfFileExists('.temp/test.txt', true);

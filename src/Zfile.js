@@ -3,8 +3,6 @@ const fs = require('fs');
 const del = require('del');
 const fileType = require('file-type');
 const Jimp = require('jimp');
-const {GifFrame, GifUtil} = require('gifwrap');
-const pngToJpg = require('png-jpg');
 const ZfileObject = require('./ZfileObject.js');
 
 /**
@@ -237,16 +235,6 @@ class Zfile {
           });
         }
       });
-    });
-  }
-
-  /**
-   * Genera un archivo Gif dummy de imagen
-   * @param {string} output - Ruta del fichero GIF
-   * @return {Promise}
-   */
-  dummyGif(output) {
-    return new Promise((resolve, reject) => {
     });
   }
 }
