@@ -1,6 +1,6 @@
 {
   "name": "z-file",
-  "version": "0.5.9",
+  "version": "0.5.10",
   "description": "Tools for file streams",
   "keywords": [
     "nodejs",
@@ -35,7 +35,6 @@
     "jimp": "^0.10.3",
     "minimist": "^1.2.5",
     "png-jpg": "^0.0.2",
-    "psd.js2": "^4.0.0",
     "replace": "^1.2.0",
     "shelljs": "0.8.3"
   },
