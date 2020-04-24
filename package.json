@@ -1,6 +1,6 @@
 {
   "name": "z-file",
-  "version": "0.5.12",
+  "version": "0.5.13",
   "description": "Tools for file streams",
   "keywords": [
     "nodejs",
