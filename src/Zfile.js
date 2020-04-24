@@ -4,7 +4,6 @@ const del = require('del');
 const fileType = require('file-type');
 const Jimp = require('jimp');
 const {GifFrame, GifUtil} = require('gifwrap');
-const PSD = require('psd');
 const pngToJpg = require('png-jpg');
 const ZfileObject = require('./ZfileObject.js');
 
@@ -50,7 +49,7 @@ class Zfile {
       const total = filenames.length;
       const that = this;
       const data = [];
-      const _read = function (id) {
+      const _read = (id) => {
         that.read(filenames[index - 1]).then((_data) => {
           data.push(_data);
           if (index < total) {
@@ -204,51 +203,6 @@ class Zfile {
    */
   create(path) {
     return new ZfileObject(this, path);
-  }
-
-  /**
-   * Genera un archivo PNG a partir de un PSD
-   * @param {string} input - Ruta del fichero PSD
-   * @param {string} output - Ruta del fichero PNG
-   * @return {Promise}
-   */
-  psdToPng(input, output) {
-    return new Promise((resolve, reject) => {
-      PSD.open(input).then((psd) => {
-        psd.image.saveAsPng(output).then(() => {
-          resolve(true);
-        }).catch((err) => reject(err));
-      }).catch((err) => reject(err));
-    });
-  }
-
-  /**
-   * Genera un archivo JPEG a partir de un PSD
-   * @param {string} input - Ruta del fichero PSD
-   * @param {string} output - Ruta del fichero JPEG
-   * @param {string} quality - Nivel compresión JPEG
-   * @return {Promise}
-   */
-  psdToJpg(input, output, quality) {
-    return new Promise((resolve, reject) => {
-      this.psdToPng(input, `${output}.png`).then(() => {
-        pngToJpg({
-          input: `${output}.png`,
-          output: output,
-          options: {
-            quality: quality,
-          },
-        }, () => {
-          fs.unlink(`${output}.png`, (err) => {
-            if (err) {
-              reject(err);
-            } else {
-              resolve(true);
-            }
-          });
-        });
-      }).catch((err) => reject(err));
-    });
   }
 
   /**

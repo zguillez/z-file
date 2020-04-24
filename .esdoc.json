@@ -3,8 +3,11 @@
   "destination": "./doc",
   "excludes": [
     ".tmp",
-    "dist",
+    "__test__",
+    "bin",
+    "coverage",
     "doc",
+    "example",
     "node_modules"
   ],
   "plugins": [

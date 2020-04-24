@@ -1,6 +1,6 @@
 {
   "name": "z-file",
-  "version": "0.5.10",
+  "version": "0.5.11",
   "description": "Tools for file streams",
   "keywords": [
     "nodejs",
@@ -24,9 +24,6 @@
     "prepare": "npm run lint && npm run test && sort-package-json && bin/prepare.js",
     "test": "jest --coverage",
     "test_": "node ./example/index.js"
-  },
-  "resolutions": {
-    "psd/lodash": "^4.17.15"
   },
   "dependencies": {
     "del": "^5.1.0",
