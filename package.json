@@ -33,7 +33,7 @@
     "file-type": "^14.2.0",
     "gifwrap": "^0.9.2",
     "jimp": "^0.10.3",
-    "minimist": "^1.2.5",
+    "minimist": "^1.2.3",
     "png-jpg": "^0.0.2",
     "psd.js2": "^4.0.0",
     "replace": "^1.2.0",
