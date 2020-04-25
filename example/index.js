@@ -1,10 +1,10 @@
 'use strict';
 const zfile = require('../src/Zfile.js');
 zfile.folder('.temp', true);
-// let f = zfile.create('.temp/test.txt');
-// f.load('bin/test.js').then(() => f.save());
-// let f = zfile.checkIfFileExists('.temp/test.txt', true);
-// let f = zfile.clean(['doc', 'doc_']);
+const f = zfile.create('.temp/test.txt');
+f.load('bin/prepare.js').then(() => f.save());
+// const f = zfile.file('.temp/test.txt', true);
+// const f = zfile.clean(['doc', 'doc_']);
 // let f = zfile.remove(['doc_']);
 // const f = zfile.files('./');
 // console.log(f);
