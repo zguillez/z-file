@@ -1,6 +1,6 @@
 {
-  "name": "z-file",
-  "version": "0.5.22",
+  "name": "@zguillez/z-file",
+  "version": "0.6.1",
   "description": "Tools for file streams",
   "keywords": [
     "nodejs",
@@ -33,6 +33,8 @@
     "shelljs": "0.8.4"
   },
   "devDependencies": {
+    "@zguillez/z-git": "^0.1.15",
+    "@zguillez/z-version": "^0.2.1",
     "colors": "1.4.0",
     "eslint": "^7.32.0",
     "eslint-config-google": "^0.14.0",
