@@ -1,6 +1,6 @@
 {
   "name": "@zguillez/z-file",
-  "version": "0.6.4",
+  "version": "0.6.5",
   "description": "Tools for file streams",
   "keywords": [
     "nodejs",
@@ -29,8 +29,7 @@
   "dependencies": {
     "del": "^6.0.0",
     "file-type": "^16.5.3",
-    "jimp": "^0.16.1",
-    "replace": "^1.2.1"
+    "jimp": "^0.16.1"
   },
   "devDependencies": {
     "@zguillez/z-git": "^0.1.18",
