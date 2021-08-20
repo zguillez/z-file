@@ -9,12 +9,6 @@ const Jimp = require('jimp');
  */
 class Zfile {
   /**
-   * Constructor
-   */
-  constructor() {
-  }
-
-  /**
    * Lee un fichero
    * @param {string} filename - El nombre del fichero
    * @return {Promise}
@@ -33,7 +27,7 @@ class Zfile {
         }
       });
     });
-  };
+  }
 
   /**
    * Lee un listado de ficheros
@@ -59,7 +53,7 @@ class Zfile {
       };
       _read(index);
     });
-  };
+  }
 
   /**
    * Guarda un fichero
@@ -81,7 +75,7 @@ class Zfile {
         }
       });
     });
-  };
+  }
 
   /**
    * Sustituye un string del fichero
@@ -92,13 +86,24 @@ class Zfile {
    */
   replace(filename, data1, data2) {
     return new Promise((resolve, reject) => {
+      console.log(11111111);
       this.read(filename).then((data) => {
+        console.log(2222222);
+        console.log(filename);
+        console.log(data1);
+        console.log(data2);
+        console.log(33333333);
+        console.log(data);
         const regexp = new RegExp(data1, 'ig');
         data = data.replace(regexp, data2);
-        this.write(filename, data).then(() => resolve(true)).catch(() => reject(err));
+        console.log(data);
+        console.log(33333333);
+        this.write(filename, data).then(() => {
+          resolve(true);
+        });
       });
     });
-  };
+  }
 
   /**
    * Comprueba si una ruta de carpetas existe
@@ -117,7 +122,7 @@ class Zfile {
     } else {
       return true;
     }
-  };
+  }
 
   /**
    * Comprueba si una ruta de fichero existe
@@ -139,7 +144,7 @@ class Zfile {
       }
       return false;
     }
-  };
+  }
 
   /**
    * Devuelve las carpetas de una ruta
@@ -231,7 +236,10 @@ class Zfile {
               image.quality(80);
               image.write(output);
             }
+            resolve(true);
           });
+        } else {
+          reject(err);
         }
       });
     });
@@ -288,7 +296,7 @@ class ZfileObject {
         });
       }
     });
-  };
+  }
 
   /**
    * Guarda datos en un fichero
@@ -302,7 +310,7 @@ class ZfileObject {
         resolve(this);
       });
     });
-  };
+  }
 
   /**
    * Obtiene el tipo de datos
@@ -318,7 +326,7 @@ class ZfileObject {
       };
     }
     return type;
-  };
+  }
 }
 
 /**

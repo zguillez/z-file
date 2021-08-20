@@ -1,6 +1,6 @@
 {
   "name": "@zguillez/z-file",
-  "version": "0.6.3",
+  "version": "0.6.4",
   "description": "Tools for file streams",
   "keywords": [
     "nodejs",
@@ -18,17 +18,19 @@
   },
   "main": "index.js",
   "scripts": {
-    "clean": "find ./ -name .DS_Store -exec rm -f {} \\;",
+    "clean": "find ./ -name .DS_Store -exec rm -f {} \\; && npm run clean:tmp",
+    "clean:tmp": "rimraf .temp",
     "lint": "eslint index.js bin/*.js --fix || true",
     "prepare": "npm run lint && npm run test && sort-package-json && bin/prepare.js",
-    "test": "jest --coverage",
+    "test": "npm run clean:tmp && jest --coverage",
     "test_": "node ./example/index.js",
     "deploy": "npm publish --access=public"
   },
   "dependencies": {
     "del": "^6.0.0",
     "file-type": "^16.5.3",
-    "jimp": "^0.16.1"
+    "jimp": "^0.16.1",
+    "replace": "^1.2.1"
   },
   "devDependencies": {
     "@zguillez/z-git": "^0.1.18",
