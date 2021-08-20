@@ -20,13 +20,15 @@ test('write test', () => {
   return expect(app.write('.temp/test.txt', 'test')).resolves.toBeTruthy();
 });
 test('read test', () => {
-  return expect(app.read('.temp/test.txt')).resolves.toBeTruthy();
- });
-// test('replace test', () => {
-//   return expect(app.replace('.temp/test.txt', 'test', 'ok')).resolves.toBeTruthy();
-// });
-  test('dummy test', () => {
-    return expect(app.dummy(240, 80, '#000000', '.temp/dummy.jpg')).resolves.toBeTruthy();
-    //expect(app.clean('.temp')).toBeTruthy();
-  });
+  return expect(app.read('.temp/test.txt')).resolves.toBe('test');
+});
+test('replace test', () => {
+  return expect(app.replace('.temp/test.txt', 'test', 'ok')).resolves.toBeTruthy();
+});
+test('reads test', () => {
+  return expect(app.reads(['.temp/test.txt', '.temp/test.txt'])).resolves.toEqual(expect.arrayContaining(['ok', 'ok']));
+});
+test('dummy test', () => {
+  return expect(app.dummy(240, 80, '#000000', '.temp/dummy.jpg')).resolves.toBeTruthy();
+});
 

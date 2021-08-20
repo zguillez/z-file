@@ -15,15 +15,11 @@ class Zfile {
    */
   read(filename) {
     return new Promise((resolve, reject) => {
-      fs.readFile(filename, (err, data) => {
+      fs.readFile(filename, 'utf-8', (err, data) => {
         if (err) {
           reject(err);
         } else {
-          if (fileType.fromBuffer(data)) {
-            resolve(data);
-          } else {
-            resolve(data.toString());
-          }
+          resolve(data.toString());
         }
       });
     });

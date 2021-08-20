@@ -1,6 +1,6 @@
 {
   "name": "@zguillez/z-file",
-  "version": "0.6.5",
+  "version": "0.6.6",
   "description": "Tools for file streams",
   "keywords": [
     "nodejs",
@@ -24,7 +24,7 @@
     "prepare": "npm run lint && npm run test && sort-package-json && bin/prepare.js",
     "test": "npm run clean:tmp && jest --coverage",
     "test_": "node ./example/index.js",
-    "deploy": "npm publish --access=public"
+    "deploy": "npm run clean && npm publish --access=public"
   },
   "dependencies": {
     "del": "^6.0.0",
