@@ -30,7 +30,7 @@
     "jimp": "^0.16.1",
     "minimist": "^1.2.5",
     "replace": "^1.2.1",
-    "shelljs": "0.8.4"
+    "shelljs": "0.8.5"
   },
   "devDependencies": {
     "@zguillez/z-git": "^0.1.15",
