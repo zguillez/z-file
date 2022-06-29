@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1656510873246" clover="3.2.0">
-  <project timestamp="1656510873246" name="All files">
+<coverage generated="1656510994201" clover="3.2.0">
+  <project timestamp="1656510994201" name="All files">
     <metrics statements="112" coveredstatements="70" conditionals="36" coveredconditionals="15" methods="37" coveredmethods="25" elements="185" coveredelements="110" complexity="0" loc="112" ncloc="112" packages="1" files="1" classes="1"/>
     <file name="Zfile.js" path="/Users/zguillez/Documentos/Repositorios/_tools/z-file/src/Zfile.js">
       <metrics statements="112" coveredstatements="70" conditionals="36" coveredconditionals="15" methods="37" coveredmethods="25"/>
